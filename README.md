@@ -33,4 +33,4 @@ Use the validator from https://github.com/google/watchface (`third_party/wff`):
     java -jar wff-validator.jar 1 app/src/main/res/raw/watchface.xml
 
 ## Releasing
-Bump `versionCode` (must stay above 10010002) and `versionName` in `app/build.gradle.kts`.
+Bump `versionCode` (current: 20000000 / 2.0.0; the last Play release was 10010002) and `versionName` in `app/build.gradle.kts`.
