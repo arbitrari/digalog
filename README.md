@@ -12,6 +12,8 @@ The 35 colors from Google's own Pixel Watch faces are all available to choose as
 
 ![Accent Color options](docs/accent-colors.png)
 
+<sub>Chart generated from `watchface.xml` and `strings.xml` by `python3 tools/render_accent_colors.py`.</sub>
+
 ## Tick Modes
 There are 4 different options for the tick marks on the watch face.
 
