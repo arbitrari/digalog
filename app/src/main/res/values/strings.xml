@@ -9,6 +9,7 @@
     <string name="ticks_hour">Hour Only</string>
     <string name="ticks_minute">Minute Only</string>
     <string name="ticks_none">None</string>
+    <string name="second_hand">Second Hand</string>
     <string name="complication_left">Left</string>
     <string name="complication_right">Right</string>
     <string name="complication_bottom">Bottom</string>
