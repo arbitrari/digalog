@@ -9,3 +9,6 @@ captures/
 .cxx/
 *.keystore
 *.jks
+
+# Signing certificates
+*.pem
