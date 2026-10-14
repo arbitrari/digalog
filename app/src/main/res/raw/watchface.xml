@@ -822,6 +822,25 @@
                 <Image resource="hand_hour_outline"/>
             </PartImage>
         </Group>
+        <!-- AOD: black inset fills (outline interiors) drawn over both outlines so only the outer silhouette of the two hands stays stroked. -->
+        <Group x="211" y="16" width="28" height="210" pivotX="0.5" pivotY="0.5" name="Hands (AOD Fill)" alpha="0">
+            <Variant mode="AMBIENT" target="alpha" value="255"/>
+            <PartImage x="0" y="0" width="28" height="210" pivotX="0.5" pivotY="0.9952380952380955" name="Minute Hand AOD Fill" alpha="255">
+                <Transform target="angle" value="0 + (clamp([MINUTE_SECOND], 0, 60) - 0) * 6 * (1)"/>
+                <Image resource="hand_minute_fill_ambient"/>
+            </PartImage>
+            <PartImage x="0" y="59" width="28" height="150" pivotX="0.5" pivotY="0.9987893462469748" name="Hour Hand AOD Fill" alpha="255">
+                <Transform target="angle" value="0 + (clamp([HOUR_0_23_MINUTE], 0, 24) - 0) * 30 * (1)"/>
+                <Image resource="hand_hour_fill_ambient"/>
+            </PartImage>
+        </Group>
+        <!-- AOD: black center disc on top so the hands' side strokes stop at the center ring. -->
+        <PartDraw x="213" y="213" width="24" height="24" pivotX="0.5" pivotY="0.5" name="Center Circle Black AOD Top" alpha="0">
+            <Variant mode="AMBIENT" target="alpha" value="255"/>
+            <Ellipse x="0" y="0" width="24" height="24">
+                <Fill color="#ff000000"/>
+            </Ellipse>
+        </PartDraw>
         <Group x="0" y="0" width="450" height="450" pivotX="0.5" pivotY="0.5" name="Digital Digits (Black)" alpha="255">
             <!-- Minute digits rotate with the minute hand, centered on its axis at radius 183. Right variant reads outward on the right half; Left variant (+180) on the left half. -->
             <Group x="0" y="0" width="450" height="450" pivotX="0.5" pivotY="0.5" name="Minute Digits" alpha="255">
