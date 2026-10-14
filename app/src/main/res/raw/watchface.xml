@@ -41,18 +41,49 @@
             <ColorOption id="guava" displayName="color_guava" colors="#ffffc1bd #ffffc1bd #ffffc1bd"/>
             <ColorOption id="lemongrass" displayName="color_lemongrass" colors="#ffebffc3 #ffebffc3 #ffebffc3"/>
         </ColorConfiguration>
+        <ListConfiguration id="tickMarks" displayName="tick_marks" defaultValue="hour_minute">
+            <ListOption id="hour_minute" displayName="ticks_hour_minute"/>
+            <ListOption id="hour" displayName="ticks_hour"/>
+            <ListOption id="minute" displayName="ticks_minute"/>
+            <ListOption id="none" displayName="ticks_none"/>
+        </ListConfiguration>
     </UserConfigurations>
     <Scene backgroundColor="#ff000000">
-        <Group x="0" y="0" width="450" height="450" pivotX="0.5" pivotY="0.5" name="optimizedGroup_9be4" alpha="255">
-            <PartImage x="0" y="0" width="450" height="450" pivotX="0.5" pivotY="0.5" name="Hour Index_d080" alpha="255">
-                <Variant mode="AMBIENT" target="alpha" value="0"/>
-                <Image resource="index_hours"/>
-            </PartImage>
-            <PartImage x="0" y="0" width="450" height="450" pivotX="0.5" pivotY="0.5" name="Index_1e84" alpha="255">
-                <Variant mode="AMBIENT" target="alpha" value="0"/>
-                <Image resource="index_minutes"/>
-            </PartImage>
-        </Group>
+        <!-- Tick Marks (editor option): which tick layers to draw. Hidden in AOD. -->
+        <ListConfiguration id="tickMarks">
+            <ListOption id="hour_minute">
+                <Group x="0" y="0" width="450" height="450" pivotX="0.5" pivotY="0.5" name="Ticks hour_minute" alpha="255">
+                    <PartImage x="0" y="0" width="450" height="450" pivotX="0.5" pivotY="0.5" name="Hour Index" alpha="255">
+                        <Variant mode="AMBIENT" target="alpha" value="0"/>
+                        <Image resource="index_hours"/>
+                    </PartImage>
+                    <PartImage x="0" y="0" width="450" height="450" pivotX="0.5" pivotY="0.5" name="Minute Index" alpha="255">
+                        <Variant mode="AMBIENT" target="alpha" value="0"/>
+                        <Image resource="index_minutes"/>
+                    </PartImage>
+                </Group>
+            </ListOption>
+            <ListOption id="hour">
+                <Group x="0" y="0" width="450" height="450" pivotX="0.5" pivotY="0.5" name="Ticks hour" alpha="255">
+                    <PartImage x="0" y="0" width="450" height="450" pivotX="0.5" pivotY="0.5" name="Hour Index" alpha="255">
+                        <Variant mode="AMBIENT" target="alpha" value="0"/>
+                        <Image resource="index_hours"/>
+                    </PartImage>
+                </Group>
+            </ListOption>
+            <ListOption id="minute">
+                <Group x="0" y="0" width="450" height="450" pivotX="0.5" pivotY="0.5" name="Ticks minute" alpha="255">
+                    <PartImage x="0" y="0" width="450" height="450" pivotX="0.5" pivotY="0.5" name="Minute Index" alpha="255">
+                        <Variant mode="AMBIENT" target="alpha" value="0"/>
+                        <Image resource="index_minutes"/>
+                    </PartImage>
+                </Group>
+            </ListOption>
+            <ListOption id="none">
+                <Group x="0" y="0" width="450" height="450" pivotX="0.5" pivotY="0.5" name="Ticks none" alpha="255">
+                </Group>
+            </ListOption>
+        </ListConfiguration>
         <ComplicationSlot slotId="0" displayName="complication_left" isCustomizable="TRUE" supportedTypes="SHORT_TEXT RANGED_VALUE SMALL_IMAGE MONOCHROMATIC_IMAGE " x="69" y="179" width="100" height="100" pivotX="0.5" pivotY="0.5" name="Left Complication_0" alpha="255">
             <Variant mode="AMBIENT" target="alpha" value="0"/>
             <DefaultProviderPolicy defaultSystemProvider="WATCH_BATTERY" defaultSystemProviderType="SHORT_TEXT"/>

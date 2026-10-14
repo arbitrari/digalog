@@ -4,6 +4,11 @@
 
     <!-- Watch face editor -->
     <string name="accent_color">Accent Color</string>
+    <string name="tick_marks">Tick Marks</string>
+    <string name="ticks_hour_minute">Hour &amp; Minute</string>
+    <string name="ticks_hour">Hour Only</string>
+    <string name="ticks_minute">Minute Only</string>
+    <string name="ticks_none">None</string>
     <string name="complication_left">Left</string>
     <string name="complication_right">Right</string>
     <string name="complication_bottom">Bottom</string>
