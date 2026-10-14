@@ -3,17 +3,43 @@
 <WatchFace width="450" height="450" clipShape="CIRCLE">
     <Metadata key="CLOCK_TYPE" value="ANALOG"/>
     <UserConfigurations>
-        <ColorConfiguration id="themeColor" defaultValue="0" displayName="color_selector_display_name">
-            <ColorOption id="0" colors="#ff00f59e #ff00f59e #ff00f59e"/>
-            <ColorOption id="1" colors="#ff953cff #ff953cff #ff953cff"/>
-            <ColorOption id="2" colors="#ffffbd48 #ffffbd48 #ffffbd48"/>
-            <ColorOption id="3" colors="#ff5fb3ff #ff5fb3ff #ff5fb3ff"/>
-            <ColorOption id="4" colors="#ffff5f62 #ffff5f62 #ffff5f62"/>
-            <ColorOption id="5" colors="#fff3ff5f #fff3ff5f #fff3ff5f"/>
-            <ColorOption id="6" colors="#ffff5fd5 #ffff5fd5 #ffff5fd5"/>
-            <ColorOption id="7" colors="#ff5ffdff #ff5ffdff #ff5ffdff"/>
-            <ColorOption id="8" colors="#ff98ff5f #ff98ff5f #ff98ff5f"/>
-            <ColorOption id="9" colors="#ffffffff #ffffffff #ffffffff"/>
+        <!-- Accent Color: the full single-color palette of Google's Pixel Watch faces (names/hex from Pixel Watch Faces 2.4.86). Option ids 0-9 are kept, mapped to the closest Pixel color, so existing selections stay similar. -->
+        <ColorConfiguration id="themeColor" defaultValue="0" displayName="accent_color">
+            <ColorOption id="graphite" displayName="color_graphite" colors="#ff949494 #ff949494 #ff949494"/>
+            <ColorOption id="cloud" displayName="color_cloud" colors="#ffe4e4e4 #ffe4e4e4 #ffe4e4e4"/>
+            <ColorOption id="9" displayName="color_almond" colors="#fffcf7eb #fffcf7eb #fffcf7eb"/>
+            <ColorOption id="4" displayName="color_watermelon" colors="#ffff7b78 #ffff7b78 #ffff7b78"/>
+            <ColorOption id="pomelo" displayName="color_pomelo" colors="#ffffa49f #ffffa49f #ffffa49f"/>
+            <ColorOption id="champagne" displayName="color_champagne" colors="#ffffd4b6 #ffffd4b6 #ffffd4b6"/>
+            <ColorOption id="wheat" displayName="color_wheat" colors="#ffffe9b9 #ffffe9b9 #ffffe9b9"/>
+            <ColorOption id="limoncello" displayName="color_limoncello" colors="#fffcffb6 #fffcffb6 #fffcffb6"/>
+            <ColorOption id="5" displayName="color_lime" colors="#ffe6ff7b #ffe6ff7b #ffe6ff7b"/>
+            <ColorOption id="8" displayName="color_pear" colors="#ffc7ff81 #ffc7ff81 #ffc7ff81"/>
+            <ColorOption id="mint" displayName="color_mint" colors="#ffabffdf #ffabffdf #ffabffdf"/>
+            <ColorOption id="jade" displayName="color_jade" colors="#ffbeecdb #ffbeecdb #ffbeecdb"/>
+            <ColorOption id="sage" displayName="color_sage" colors="#ffcce4df #ffcce4df #ffcce4df"/>
+            <ColorOption id="forest" displayName="color_forest" colors="#ff67887b #ff67887b #ff67887b"/>
+            <ColorOption id="spearmint" displayName="color_spearmint" colors="#ffadf7b9 #ffadf7b9 #ffadf7b9"/>
+            <ColorOption id="sky" displayName="color_sky" colors="#ffb6daf1 #ffb6daf1 #ffb6daf1"/>
+            <ColorOption id="ocean" displayName="color_ocean" colors="#ffa2c2f7 #ffa2c2f7 #ffa2c2f7"/>
+            <ColorOption id="3" displayName="color_sapphire" colors="#ff81acf4 #ff81acf4 #ff81acf4"/>
+            <ColorOption id="1" displayName="color_amethyst" colors="#ffaeb4ff #ffaeb4ff #ffaeb4ff"/>
+            <ColorOption id="flamingo" displayName="color_flamingo" colors="#fffabbff #fffabbff #fffabbff"/>
+            <ColorOption id="bubble_gum" displayName="color_bubble_gum" colors="#ffffcaed #ffffcaed #ffffcaed"/>
+            <ColorOption id="coral" displayName="color_coral" colors="#fff99586 #fff99586 #fff99586"/>
+            <ColorOption id="peach" displayName="color_peach" colors="#fffdb78f #fffdb78f #fffdb78f"/>
+            <ColorOption id="chai" displayName="color_chai" colors="#ffd8ab77 #ffd8ab77 #ffd8ab77"/>
+            <ColorOption id="sand" displayName="color_sand" colors="#ffc4b575 #ffc4b575 #ffc4b575"/>
+            <ColorOption id="2" displayName="color_honey" colors="#fff8c67c #fff8c67c #fff8c67c"/>
+            <ColorOption id="melon" displayName="color_melon" colors="#ffffd88a #ffffd88a #ffffd88a"/>
+            <ColorOption id="dandelion" displayName="color_dandelion" colors="#fffffa86 #fffffa86 #fffffa86"/>
+            <ColorOption id="0" displayName="color_fern" colors="#ff77d9a4 #ff77d9a4 #ff77d9a4"/>
+            <ColorOption id="stream" displayName="color_stream" colors="#ffb0e4ec #ffb0e4ec #ffb0e4ec"/>
+            <ColorOption id="7" displayName="color_aqua" colors="#ff99f3ff #ff99f3ff #ff99f3ff"/>
+            <ColorOption id="lilac" displayName="color_lilac" colors="#ffd6c3ff #ffd6c3ff #ffd6c3ff"/>
+            <ColorOption id="6" displayName="color_lavender" colors="#ffe4b0fd #ffe4b0fd #ffe4b0fd"/>
+            <ColorOption id="guava" displayName="color_guava" colors="#ffffc1bd #ffffc1bd #ffffc1bd"/>
+            <ColorOption id="lemongrass" displayName="color_lemongrass" colors="#ffebffc3 #ffebffc3 #ffebffc3"/>
         </ColorConfiguration>
     </UserConfigurations>
     <Scene backgroundColor="#ff000000">
@@ -27,7 +53,7 @@
                 <Image resource="index_minutes"/>
             </PartImage>
         </Group>
-        <ComplicationSlot slotId="0" displayName="Left Complication" isCustomizable="TRUE" supportedTypes="SHORT_TEXT RANGED_VALUE SMALL_IMAGE MONOCHROMATIC_IMAGE " x="69" y="179" width="100" height="100" pivotX="0.5" pivotY="0.5" name="Left Complication_0" alpha="255">
+        <ComplicationSlot slotId="0" displayName="complication_left" isCustomizable="TRUE" supportedTypes="SHORT_TEXT RANGED_VALUE SMALL_IMAGE MONOCHROMATIC_IMAGE " x="69" y="179" width="100" height="100" pivotX="0.5" pivotY="0.5" name="Left Complication_0" alpha="255">
             <Variant mode="AMBIENT" target="alpha" value="0"/>
             <DefaultProviderPolicy defaultSystemProvider="WATCH_BATTERY" defaultSystemProviderType="SHORT_TEXT"/>
             <BoundingOval x="0" y="0" width="100" height="100"/>
@@ -287,7 +313,7 @@
             </Complication>
             <Complication type="EMPTY"/>
         </ComplicationSlot>
-        <ComplicationSlot slotId="1" displayName="Right Complication" isCustomizable="TRUE" supportedTypes="SHORT_TEXT RANGED_VALUE SMALL_IMAGE MONOCHROMATIC_IMAGE " x="289" y="179" width="100" height="100" pivotX="0.5" pivotY="0.5" name="Right Complication_1" alpha="255">
+        <ComplicationSlot slotId="1" displayName="complication_right" isCustomizable="TRUE" supportedTypes="SHORT_TEXT RANGED_VALUE SMALL_IMAGE MONOCHROMATIC_IMAGE " x="289" y="179" width="100" height="100" pivotX="0.5" pivotY="0.5" name="Right Complication_1" alpha="255">
             <Variant mode="AMBIENT" target="alpha" value="0"/>
             <DefaultProviderPolicy defaultSystemProvider="DAY_AND_DATE" defaultSystemProviderType="SHORT_TEXT"/>
             <BoundingOval x="0" y="0" width="100" height="100"/>
@@ -537,7 +563,7 @@
             </Complication>
             <Complication type="EMPTY"/>
         </ComplicationSlot>
-        <ComplicationSlot slotId="2" displayName="Bottom Complication" isCustomizable="TRUE" supportedTypes="SHORT_TEXT RANGED_VALUE SMALL_IMAGE MONOCHROMATIC_IMAGE " x="175" y="286" width="100" height="100" pivotX="0.5" pivotY="0.5" name="Bottom Complication_2" alpha="255">
+        <ComplicationSlot slotId="2" displayName="complication_bottom" isCustomizable="TRUE" supportedTypes="SHORT_TEXT RANGED_VALUE SMALL_IMAGE MONOCHROMATIC_IMAGE " x="175" y="286" width="100" height="100" pivotX="0.5" pivotY="0.5" name="Bottom Complication_2" alpha="255">
             <Variant mode="AMBIENT" target="alpha" value="0"/>
             <DefaultProviderPolicy defaultSystemProvider="EMPTY" defaultSystemProviderType="SHORT_TEXT"/>
             <BoundingOval x="0" y="0" width="100" height="100"/>
