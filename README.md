@@ -6,6 +6,8 @@ slots, and a choice of ten second-hand colors. Package: `com.arbitrary.digalog`.
 This project was recovered from the published Play bundle (Watch Face Studio 1.5.7, v1.0.2,
 versionCode 10010002). It is a **resource-only** Watch Face Format (WFF v1) app, with no Kotlin or Java code.
 
+![Digalog ticking, then switching to always-on](docs/digalog.gif)
+
 ## Accent colors
 
 The editor's first option, **Accent Color**, tints the second hand and complication accents. It offers the 35 colors of Google's Pixel Watch faces, shown here in editor order. The default is Fern (ringed).
