@@ -795,7 +795,7 @@
             </PartDraw>
             <PartDraw x="213" y="213" width="24" height="24" pivotX="0.5" pivotY="0.5" name="Center Circle Black_df9a" alpha="0">
                 <Variant mode="AMBIENT" target="alpha" value="255"/>
-                <Ellipse x="0" y="0" width="24" height="24">
+                <Ellipse x="0.5" y="0.5" width="23" height="23">
                     <Fill color="#ff000000"/>
                 </Ellipse>
             </PartDraw>
@@ -834,10 +834,10 @@
                 <Image resource="hand_hour_fill_ambient"/>
             </PartImage>
         </Group>
-        <!-- AOD: black center disc on top so the hands' side strokes stop at the center ring. -->
+        <!-- AOD: black center disc on top. With the 28-unit white ring (= hand width) underneath and this 23-unit disc (inset by the ~2.5-unit hand stroke), the ring becomes a round join tangent to both hands, so the outline stays continuous with no protrusion and no gap. -->
         <PartDraw x="213" y="213" width="24" height="24" pivotX="0.5" pivotY="0.5" name="Center Circle Black AOD Top" alpha="0">
             <Variant mode="AMBIENT" target="alpha" value="255"/>
-            <Ellipse x="0" y="0" width="24" height="24">
+            <Ellipse x="0.5" y="0.5" width="23" height="23">
                 <Fill color="#ff000000"/>
             </Ellipse>
         </PartDraw>
