@@ -4,7 +4,7 @@
 A simple Wear OS watch face that appears analog on the surface, but integrates a digital time on the hour and minute hands for quick reference.
 
 ## Preview
-![Digalog ticking, then switching to always-on](docs/digalog.webp)
+<p align="center"><img src="docs/digalog.webp" alt="Digalog ticking, then switching to always-on" width="360"></p>
 
 ## Accent Colors
 
