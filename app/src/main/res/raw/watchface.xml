@@ -47,7 +47,10 @@
             <ListOption id="minute" displayName="ticks_minute"/>
             <ListOption id="none" displayName="ticks_none"/>
         </ListConfiguration>
-        <BooleanConfiguration id="showSecondHand" displayName="second_hand" defaultValue="TRUE"/>
+        <ListConfiguration id="secondHand" displayName="second_hand" defaultValue="show">
+            <ListOption id="show" displayName="second_hand_show"/>
+            <ListOption id="hide" displayName="second_hand_hide"/>
+        </ListConfiguration>
     </UserConfigurations>
     <Scene backgroundColor="#ff000000">
         <!-- Tick Marks (editor option): which tick layers to draw. Hidden in AOD. -->
@@ -980,9 +983,9 @@
                 </PartText>
             </Group>
         </Group>
-        <!-- Second Hand (editor option): drawn only when showSecondHand is TRUE. Hidden in AOD regardless. -->
-        <BooleanConfiguration id="showSecondHand">
-            <BooleanOption id="TRUE">
+        <!-- Second Hand (editor option): drawn only when secondHand is "show". Hidden in AOD regardless. -->
+        <ListConfiguration id="secondHand">
+            <ListOption id="show">
                 <Group x="0" y="0" width="450" height="450" pivotX="0.5" pivotY="0.5" name="Second Hand Option" alpha="255">
                     <PartDraw x="221" y="221" width="9" height="9" pivotX="0.5" pivotY="0.5" name="Rounded Second Hand_a2ca" tintColor="[CONFIGURATION.themeColor.0]" alpha="255">
                         <Variant mode="AMBIENT" target="alpha" value="0"/>
@@ -998,7 +1001,11 @@
                         </PartImage>
                     </Group>
                 </Group>
-            </BooleanOption>
-        </BooleanConfiguration>
+            </ListOption>
+            <ListOption id="hide">
+                <Group x="0" y="0" width="450" height="450" pivotX="0.5" pivotY="0.5" name="Second Hand Hidden" alpha="255">
+                </Group>
+            </ListOption>
+        </ListConfiguration>
     </Scene>
 </WatchFace>
