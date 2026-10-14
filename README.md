@@ -60,3 +60,7 @@ TBD
         <img src="https://arbitrari.dev/assets/arbitrari-black.png" height="16px" style="margin-top: 16px">
     </picture>
 </p>
+
+## License
+
+Digalog is licensed under the [GNU General Public License v3.0](LICENSE).
