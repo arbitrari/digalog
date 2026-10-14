@@ -49,7 +49,9 @@ Bump `versionCode` (current: 20000000 / 2.0.0; the last Play release was 1001000
 
 ## License
 
-TBD
+digalog is licensed under the [*GNU General Public License v3.0*](https://choosealicense.com/licenses/lgpl-3.0/). Permissions of this strong copyleft license are conditioned on making available complete source code of licensed works and modifications, which include larger works using a licensed work, under the same license. Copyright and license notices must be preserved. Contributors provide an express grant of patent rights.
+
+For the betterment of the community, we prefer you contribute directly to this project, but you may use your own fork as long as it is public like this project is.
 
 <p align="center">___</p>
 <p align="center">
@@ -60,7 +62,3 @@ TBD
         <img src="https://arbitrari.dev/assets/arbitrari-black.png" height="16px" style="margin-top: 16px">
     </picture>
 </p>
-
-## License
-
-Digalog is licensed under the [GNU General Public License v3.0](LICENSE).
