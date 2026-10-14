@@ -51,7 +51,15 @@ Use the validator from https://github.com/google/watchface (`third_party/wff`):
     java -jar wff-validator.jar 1 app/src/main/res/raw/watchface.xml
 
 ### Releasing
-Bump `versionCode` (current: 20000000 / 2.0.0; the last Play release was 10010002) and `versionName` in `app/build.gradle.kts`.
+Bump `versionCode` and `versionName` in `app/build.gradle.kts`. 
+
+`versionCode` is a whole number that only Google Play and Android look at. It has to increase with every upload, and Play rejects any upload whose code isn't higher than the last one. The code is generated from the version name: major × 10,000,000 + minor × 100,000 + patch × 1,000, plus a final three-digit build counter.
+
+`2.0.0` gives `20000000`
+`2.1.0` gives `20100000`
+`2.1.3` gives `20103000`
+
+Uploading 2.1.3 a second time without changing the name gives `20103001`. That way the code always increases in step with the name, and you can read the version off the number.
 
 ## License
 
