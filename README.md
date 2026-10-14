@@ -17,6 +17,10 @@ The 35 colors from Google's own Pixel Watch faces are all available to choose as
 ## Tick Modes
 There are 4 different options for the tick marks on the watch face.
 
+![Tick Marks options: Hour & Minute, Hour Only, Minute Only, None](docs/tick-marks.png)
+
+<sub>Generated from the repo assets by `python3 tools/render_tick_marks.py`.</sub>
+
 
 ## Development
 
