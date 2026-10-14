@@ -42,10 +42,7 @@
                         <PartText x="10" y="35" width="80" height="30" pivotX="0.5" pivotY="0.5" name="Text_afe1" alpha="255">
                             <Text align="CENTER" ellipsis="TRUE">
                                 <Font family="SYNC_TO_DEVICE" size="20" weight="NORMAL" slant="NORMAL" color="#ffffffff">
-                                    <Template>
-                                        %s
-                                        <Parameter expression="[COMPLICATION.TEXT]"/>
-                                    </Template>
+                                    <Template>%s<Parameter expression="[COMPLICATION.TEXT]"/></Template>
                                 </Font>
                             </Text>
                         </PartText>
@@ -57,10 +54,7 @@
                         <PartText x="10" y="48" width="80" height="30" pivotX="0.5" pivotY="0.5" name="Text_b15e" alpha="255">
                             <Text align="CENTER" ellipsis="TRUE">
                                 <Font family="SYNC_TO_DEVICE" size="20" weight="NORMAL" slant="NORMAL" color="#ffffffff">
-                                    <Template>
-                                        %s
-                                        <Parameter expression="[COMPLICATION.TEXT]"/>
-                                    </Template>
+                                    <Template>%s<Parameter expression="[COMPLICATION.TEXT]"/></Template>
                                 </Font>
                             </Text>
                         </PartText>
@@ -69,20 +63,14 @@
                         <PartText x="9" y="24" width="83" height="30" pivotX="0.5" pivotY="0.5" name="Text_2c47" alpha="255">
                             <Text align="CENTER" ellipsis="TRUE">
                                 <Font family="SYNC_TO_DEVICE" size="20" weight="NORMAL" slant="NORMAL" color="#ffffffff">
-                                    <Template>
-                                        %s
-                                        <Parameter expression="[COMPLICATION.TEXT]"/>
-                                    </Template>
+                                    <Template>%s<Parameter expression="[COMPLICATION.TEXT]"/></Template>
                                 </Font>
                             </Text>
                         </PartText>
                         <PartText x="9" y="57" width="83" height="20" pivotX="0.5" pivotY="0.5" name="Title_91cb" alpha="255">
                             <Text align="CENTER" ellipsis="TRUE">
                                 <Font family="SYNC_TO_DEVICE" size="12" weight="NORMAL" slant="NORMAL" color="#ffadadad">
-                                    <Template>
-                                        %s
-                                        <Parameter expression="[COMPLICATION.TITLE]"/>
-                                    </Template>
+                                    <Template>%s<Parameter expression="[COMPLICATION.TITLE]"/></Template>
                                 </Font>
                             </Text>
                         </PartText>
@@ -94,20 +82,14 @@
                         <PartText x="4" y="37" width="91" height="30" pivotX="0.5" pivotY="0.5" name="Text_cf8c" alpha="255">
                             <Text align="CENTER" ellipsis="TRUE">
                                 <Font family="SYNC_TO_DEVICE" size="20" weight="NORMAL" slant="NORMAL" color="#ffffffff">
-                                    <Template>
-                                        %s
-                                        <Parameter expression="[COMPLICATION.TEXT]"/>
-                                    </Template>
+                                    <Template>%s<Parameter expression="[COMPLICATION.TEXT]"/></Template>
                                 </Font>
                             </Text>
                         </PartText>
                         <PartText x="21" y="70" width="59" height="20" pivotX="0.5" pivotY="0.5" name="Title_5c05" alpha="255">
                             <Text align="CENTER" ellipsis="TRUE">
                                 <Font family="SYNC_TO_DEVICE" size="12" weight="NORMAL" slant="NORMAL" color="#ffadadad">
-                                    <Template>
-                                        %s
-                                        <Parameter expression="[COMPLICATION.TITLE]"/>
-                                    </Template>
+                                    <Template>%s<Parameter expression="[COMPLICATION.TITLE]"/></Template>
                                 </Font>
                             </Text>
                         </PartText>
@@ -152,10 +134,7 @@
                         <PartText x="17" y="35" width="65" height="30" pivotX="0.5" pivotY="0.5" name="Text_4dc5" alpha="255">
                             <Text align="CENTER" ellipsis="TRUE">
                                 <Font family="SYNC_TO_DEVICE" size="16" weight="NORMAL" slant="NORMAL" color="#ffffffff">
-                                    <Template>
-                                        %s
-                                        <Parameter expression="[COMPLICATION.TEXT]"/>
-                                    </Template>
+                                    <Template>%s<Parameter expression="[COMPLICATION.TEXT]"/></Template>
                                 </Font>
                             </Text>
                         </PartText>
@@ -173,10 +152,7 @@
                         <PartText x="17" y="35" width="65" height="30" pivotX="0.5" pivotY="0.5" name="Text_4dc5" alpha="255">
                             <Text align="CENTER" ellipsis="TRUE">
                                 <Font family="SYNC_TO_DEVICE" size="16" weight="NORMAL" slant="NORMAL" color="#ffffffff">
-                                    <Template>
-                                        %s
-                                        <Parameter expression="[COMPLICATION.TITLE]"/>
-                                    </Template>
+                                    <Template>%s<Parameter expression="[COMPLICATION.TITLE]"/></Template>
                                 </Font>
                             </Text>
                         </PartText>
@@ -213,10 +189,7 @@
                         <PartText x="17" y="48" width="65" height="30" pivotX="0.5" pivotY="0.5" name="Text_4b60" tintColor="[CONFIGURATION.themeColor.0]" alpha="255">
                             <Text align="CENTER" ellipsis="TRUE">
                                 <Font family="SYNC_TO_DEVICE" size="16" weight="NORMAL" slant="NORMAL" color="#ffffffff">
-                                    <Template>
-                                        %s
-                                        <Parameter expression="[COMPLICATION.TEXT]"/>
-                                    </Template>
+                                    <Template>%s<Parameter expression="[COMPLICATION.TEXT]"/></Template>
                                 </Font>
                             </Text>
                         </PartText>
@@ -234,20 +207,14 @@
                         <PartText x="17" y="24" width="65" height="30" pivotX="0.5" pivotY="0.5" name="Text_0d56" alpha="255">
                             <Text align="CENTER" ellipsis="TRUE">
                                 <Font family="SYNC_TO_DEVICE" size="16" weight="NORMAL" slant="NORMAL" color="#ffffffff">
-                                    <Template>
-                                        %s
-                                        <Parameter expression="[COMPLICATION.TEXT]"/>
-                                    </Template>
+                                    <Template>%s<Parameter expression="[COMPLICATION.TEXT]"/></Template>
                                 </Font>
                             </Text>
                         </PartText>
                         <PartText x="21" y="57" width="59" height="20" pivotX="0.5" pivotY="0.5" name="Title_a276" alpha="255">
                             <Text align="CENTER" ellipsis="TRUE">
                                 <Font family="SYNC_TO_DEVICE" size="12" weight="NORMAL" slant="NORMAL" color="#ffadadad">
-                                    <Template>
-                                        %s
-                                        <Parameter expression="[COMPLICATION.TITLE]"/>
-                                    </Template>
+                                    <Template>%s<Parameter expression="[COMPLICATION.TITLE]"/></Template>
                                 </Font>
                             </Text>
                         </PartText>
@@ -273,10 +240,7 @@
                         <PartText x="17" y="48" width="65" height="30" pivotX="0.5" pivotY="0.5" name="Text_4b60" tintColor="[CONFIGURATION.themeColor.0]" alpha="255">
                             <Text align="CENTER" ellipsis="TRUE">
                                 <Font family="SYNC_TO_DEVICE" size="16" weight="NORMAL" slant="NORMAL" color="#ffffffff">
-                                    <Template>
-                                        %s
-                                        <Parameter expression="[COMPLICATION.TITLE]"/>
-                                    </Template>
+                                    <Template>%s<Parameter expression="[COMPLICATION.TITLE]"/></Template>
                                 </Font>
                             </Text>
                         </PartText>
@@ -297,20 +261,14 @@
                         <PartText x="20" y="42" width="61" height="24" pivotX="0.5" pivotY="0.5" name="Text_b336" alpha="255">
                             <Text align="CENTER" ellipsis="TRUE">
                                 <Font family="SYNC_TO_DEVICE" size="16" weight="NORMAL" slant="NORMAL" color="#ffffffff">
-                                    <Template>
-                                        %s
-                                        <Parameter expression="[COMPLICATION.TEXT]"/>
-                                    </Template>
+                                    <Template>%s<Parameter expression="[COMPLICATION.TEXT]"/></Template>
                                 </Font>
                             </Text>
                         </PartText>
                         <PartText x="21" y="67" width="59" height="15" pivotX="0.5" pivotY="0.5" name="Title_f15a" alpha="255">
                             <Text align="CENTER" ellipsis="TRUE">
                                 <Font family="SYNC_TO_DEVICE" size="12" weight="NORMAL" slant="NORMAL" color="#ffadadad">
-                                    <Template>
-                                        %s
-                                        <Parameter expression="[COMPLICATION.TITLE]"/>
-                                    </Template>
+                                    <Template>%s<Parameter expression="[COMPLICATION.TITLE]"/></Template>
                                 </Font>
                             </Text>
                         </PartText>
@@ -344,10 +302,7 @@
                         <PartText x="10" y="35" width="80" height="30" pivotX="0.5" pivotY="0.5" name="Text_a839" alpha="255">
                             <Text align="CENTER" ellipsis="TRUE">
                                 <Font family="SYNC_TO_DEVICE" size="20" weight="NORMAL" slant="NORMAL" color="#ffffffff">
-                                    <Template>
-                                        %s
-                                        <Parameter expression="[COMPLICATION.TEXT]"/>
-                                    </Template>
+                                    <Template>%s<Parameter expression="[COMPLICATION.TEXT]"/></Template>
                                 </Font>
                             </Text>
                         </PartText>
@@ -359,10 +314,7 @@
                         <PartText x="10" y="48" width="80" height="30" pivotX="0.5" pivotY="0.5" name="Text_eb20" alpha="255">
                             <Text align="CENTER" ellipsis="TRUE">
                                 <Font family="SYNC_TO_DEVICE" size="20" weight="NORMAL" slant="NORMAL" color="#ffffffff">
-                                    <Template>
-                                        %s
-                                        <Parameter expression="[COMPLICATION.TEXT]"/>
-                                    </Template>
+                                    <Template>%s<Parameter expression="[COMPLICATION.TEXT]"/></Template>
                                 </Font>
                             </Text>
                         </PartText>
@@ -371,20 +323,14 @@
                         <PartText x="9" y="24" width="83" height="30" pivotX="0.5" pivotY="0.5" name="Text_9817" alpha="255">
                             <Text align="CENTER" ellipsis="TRUE">
                                 <Font family="SYNC_TO_DEVICE" size="20" weight="NORMAL" slant="NORMAL" color="#ffffffff">
-                                    <Template>
-                                        %s
-                                        <Parameter expression="[COMPLICATION.TEXT]"/>
-                                    </Template>
+                                    <Template>%s<Parameter expression="[COMPLICATION.TEXT]"/></Template>
                                 </Font>
                             </Text>
                         </PartText>
                         <PartText x="9" y="57" width="83" height="20" pivotX="0.5" pivotY="0.5" name="Title_b4dd" alpha="255">
                             <Text align="CENTER" ellipsis="TRUE">
                                 <Font family="SYNC_TO_DEVICE" size="12" weight="NORMAL" slant="NORMAL" color="#ffadadad">
-                                    <Template>
-                                        %s
-                                        <Parameter expression="[COMPLICATION.TITLE]"/>
-                                    </Template>
+                                    <Template>%s<Parameter expression="[COMPLICATION.TITLE]"/></Template>
                                 </Font>
                             </Text>
                         </PartText>
@@ -396,20 +342,14 @@
                         <PartText x="4" y="37" width="91" height="30" pivotX="0.5" pivotY="0.5" name="Text_6e0a" alpha="255">
                             <Text align="CENTER" ellipsis="TRUE">
                                 <Font family="SYNC_TO_DEVICE" size="20" weight="NORMAL" slant="NORMAL" color="#ffffffff">
-                                    <Template>
-                                        %s
-                                        <Parameter expression="[COMPLICATION.TEXT]"/>
-                                    </Template>
+                                    <Template>%s<Parameter expression="[COMPLICATION.TEXT]"/></Template>
                                 </Font>
                             </Text>
                         </PartText>
                         <PartText x="21" y="70" width="59" height="20" pivotX="0.5" pivotY="0.5" name="Title_2ff4" alpha="255">
                             <Text align="CENTER" ellipsis="TRUE">
                                 <Font family="SYNC_TO_DEVICE" size="12" weight="NORMAL" slant="NORMAL" color="#ffadadad">
-                                    <Template>
-                                        %s
-                                        <Parameter expression="[COMPLICATION.TITLE]"/>
-                                    </Template>
+                                    <Template>%s<Parameter expression="[COMPLICATION.TITLE]"/></Template>
                                 </Font>
                             </Text>
                         </PartText>
@@ -454,10 +394,7 @@
                         <PartText x="17" y="35" width="65" height="30" pivotX="0.5" pivotY="0.5" name="Text_641d" alpha="255">
                             <Text align="CENTER" ellipsis="TRUE">
                                 <Font family="SYNC_TO_DEVICE" size="16" weight="NORMAL" slant="NORMAL" color="#ffffffff">
-                                    <Template>
-                                        %s
-                                        <Parameter expression="[COMPLICATION.TEXT]"/>
-                                    </Template>
+                                    <Template>%s<Parameter expression="[COMPLICATION.TEXT]"/></Template>
                                 </Font>
                             </Text>
                         </PartText>
@@ -475,10 +412,7 @@
                         <PartText x="17" y="35" width="65" height="30" pivotX="0.5" pivotY="0.5" name="Text_641d" alpha="255">
                             <Text align="CENTER" ellipsis="TRUE">
                                 <Font family="SYNC_TO_DEVICE" size="16" weight="NORMAL" slant="NORMAL" color="#ffffffff">
-                                    <Template>
-                                        %s
-                                        <Parameter expression="[COMPLICATION.TITLE]"/>
-                                    </Template>
+                                    <Template>%s<Parameter expression="[COMPLICATION.TITLE]"/></Template>
                                 </Font>
                             </Text>
                         </PartText>
@@ -510,10 +444,7 @@
                         <PartText x="17" y="48" width="65" height="30" pivotX="0.5" pivotY="0.5" name="Text_8c00" alpha="255">
                             <Text align="CENTER" ellipsis="TRUE">
                                 <Font family="SYNC_TO_DEVICE" size="16" weight="NORMAL" slant="NORMAL" color="#ffffffff">
-                                    <Template>
-                                        %s
-                                        <Parameter expression="[COMPLICATION.TEXT]"/>
-                                    </Template>
+                                    <Template>%s<Parameter expression="[COMPLICATION.TEXT]"/></Template>
                                 </Font>
                             </Text>
                         </PartText>
@@ -531,20 +462,14 @@
                         <PartText x="17" y="24" width="65" height="30" pivotX="0.5" pivotY="0.5" name="Text_0ae8" tintColor="[CONFIGURATION.themeColor.0]" alpha="255">
                             <Text align="CENTER" ellipsis="TRUE">
                                 <Font family="SYNC_TO_DEVICE" size="16" weight="NORMAL" slant="NORMAL" color="#ffffffff">
-                                    <Template>
-                                        %s
-                                        <Parameter expression="[COMPLICATION.TEXT]"/>
-                                    </Template>
+                                    <Template>%s<Parameter expression="[COMPLICATION.TEXT]"/></Template>
                                 </Font>
                             </Text>
                         </PartText>
                         <PartText x="21" y="57" width="59" height="20" pivotX="0.5" pivotY="0.5" name="Title_8d22" tintColor="[CONFIGURATION.themeColor.0]" alpha="255">
                             <Text align="CENTER" ellipsis="TRUE">
                                 <Font family="SYNC_TO_DEVICE" size="12" weight="NORMAL" slant="NORMAL" color="#ffadadad">
-                                    <Template>
-                                        %s
-                                        <Parameter expression="[COMPLICATION.TITLE]"/>
-                                    </Template>
+                                    <Template>%s<Parameter expression="[COMPLICATION.TITLE]"/></Template>
                                 </Font>
                             </Text>
                         </PartText>
@@ -565,10 +490,7 @@
                         <PartText x="17" y="48" width="65" height="30" pivotX="0.5" pivotY="0.5" name="Text_8c00" alpha="255">
                             <Text align="CENTER" ellipsis="TRUE">
                                 <Font family="SYNC_TO_DEVICE" size="16" weight="NORMAL" slant="NORMAL" color="#ffffffff">
-                                    <Template>
-                                        %s
-                                        <Parameter expression="[COMPLICATION.TITLE]"/>
-                                    </Template>
+                                    <Template>%s<Parameter expression="[COMPLICATION.TITLE]"/></Template>
                                 </Font>
                             </Text>
                         </PartText>
@@ -589,20 +511,14 @@
                         <PartText x="20" y="42" width="61" height="24" pivotX="0.5" pivotY="0.5" name="Text_87d4" alpha="255">
                             <Text align="CENTER" ellipsis="TRUE">
                                 <Font family="SYNC_TO_DEVICE" size="16" weight="NORMAL" slant="NORMAL" color="#ffffffff">
-                                    <Template>
-                                        %s
-                                        <Parameter expression="[COMPLICATION.TEXT]"/>
-                                    </Template>
+                                    <Template>%s<Parameter expression="[COMPLICATION.TEXT]"/></Template>
                                 </Font>
                             </Text>
                         </PartText>
                         <PartText x="21" y="67" width="59" height="15" pivotX="0.5" pivotY="0.5" name="Title_ff98" alpha="255">
                             <Text align="CENTER" ellipsis="TRUE">
                                 <Font family="SYNC_TO_DEVICE" size="12" weight="NORMAL" slant="NORMAL" color="#ffadadad">
-                                    <Template>
-                                        %s
-                                        <Parameter expression="[COMPLICATION.TITLE]"/>
-                                    </Template>
+                                    <Template>%s<Parameter expression="[COMPLICATION.TITLE]"/></Template>
                                 </Font>
                             </Text>
                         </PartText>
@@ -636,10 +552,7 @@
                         <PartText x="10" y="35" width="80" height="30" pivotX="0.5" pivotY="0.5" name="Text_b409" alpha="255">
                             <Text align="CENTER" ellipsis="TRUE">
                                 <Font family="SYNC_TO_DEVICE" size="20" weight="NORMAL" slant="NORMAL" color="#ffffffff">
-                                    <Template>
-                                        %s
-                                        <Parameter expression="[COMPLICATION.TEXT]"/>
-                                    </Template>
+                                    <Template>%s<Parameter expression="[COMPLICATION.TEXT]"/></Template>
                                 </Font>
                             </Text>
                         </PartText>
@@ -651,10 +564,7 @@
                         <PartText x="10" y="48" width="80" height="30" pivotX="0.5" pivotY="0.5" name="Text_8dba" alpha="255">
                             <Text align="CENTER" ellipsis="TRUE">
                                 <Font family="SYNC_TO_DEVICE" size="20" weight="NORMAL" slant="NORMAL" color="#ffffffff">
-                                    <Template>
-                                        %s
-                                        <Parameter expression="[COMPLICATION.TEXT]"/>
-                                    </Template>
+                                    <Template>%s<Parameter expression="[COMPLICATION.TEXT]"/></Template>
                                 </Font>
                             </Text>
                         </PartText>
@@ -663,20 +573,14 @@
                         <PartText x="9" y="24" width="83" height="30" pivotX="0.5" pivotY="0.5" name="Text_17cd" alpha="255">
                             <Text align="CENTER" ellipsis="TRUE">
                                 <Font family="SYNC_TO_DEVICE" size="20" weight="NORMAL" slant="NORMAL" color="#ffffffff">
-                                    <Template>
-                                        %s
-                                        <Parameter expression="[COMPLICATION.TEXT]"/>
-                                    </Template>
+                                    <Template>%s<Parameter expression="[COMPLICATION.TEXT]"/></Template>
                                 </Font>
                             </Text>
                         </PartText>
                         <PartText x="9" y="57" width="83" height="20" pivotX="0.5" pivotY="0.5" name="Title_60f8" alpha="255">
                             <Text align="CENTER" ellipsis="TRUE">
                                 <Font family="SYNC_TO_DEVICE" size="12" weight="NORMAL" slant="NORMAL" color="#ffadadad">
-                                    <Template>
-                                        %s
-                                        <Parameter expression="[COMPLICATION.TITLE]"/>
-                                    </Template>
+                                    <Template>%s<Parameter expression="[COMPLICATION.TITLE]"/></Template>
                                 </Font>
                             </Text>
                         </PartText>
@@ -688,20 +592,14 @@
                         <PartText x="4" y="37" width="91" height="30" pivotX="0.5" pivotY="0.5" name="Text_1ec3" alpha="255">
                             <Text align="CENTER" ellipsis="TRUE">
                                 <Font family="SYNC_TO_DEVICE" size="20" weight="NORMAL" slant="NORMAL" color="#ffffffff">
-                                    <Template>
-                                        %s
-                                        <Parameter expression="[COMPLICATION.TEXT]"/>
-                                    </Template>
+                                    <Template>%s<Parameter expression="[COMPLICATION.TEXT]"/></Template>
                                 </Font>
                             </Text>
                         </PartText>
                         <PartText x="21" y="70" width="59" height="20" pivotX="0.5" pivotY="0.5" name="Title_b857" alpha="255">
                             <Text align="CENTER" ellipsis="TRUE">
                                 <Font family="SYNC_TO_DEVICE" size="12" weight="NORMAL" slant="NORMAL" color="#ffadadad">
-                                    <Template>
-                                        %s
-                                        <Parameter expression="[COMPLICATION.TITLE]"/>
-                                    </Template>
+                                    <Template>%s<Parameter expression="[COMPLICATION.TITLE]"/></Template>
                                 </Font>
                             </Text>
                         </PartText>
@@ -746,10 +644,7 @@
                         <PartText x="17" y="35" width="65" height="30" pivotX="0.5" pivotY="0.5" name="Text_eb6c" alpha="255">
                             <Text align="CENTER" ellipsis="TRUE">
                                 <Font family="SYNC_TO_DEVICE" size="16" weight="NORMAL" slant="NORMAL" color="#ffffffff">
-                                    <Template>
-                                        %s
-                                        <Parameter expression="[COMPLICATION.TEXT]"/>
-                                    </Template>
+                                    <Template>%s<Parameter expression="[COMPLICATION.TEXT]"/></Template>
                                 </Font>
                             </Text>
                         </PartText>
@@ -767,10 +662,7 @@
                         <PartText x="17" y="35" width="65" height="30" pivotX="0.5" pivotY="0.5" name="Text_eb6c" alpha="255">
                             <Text align="CENTER" ellipsis="TRUE">
                                 <Font family="SYNC_TO_DEVICE" size="16" weight="NORMAL" slant="NORMAL" color="#ffffffff">
-                                    <Template>
-                                        %s
-                                        <Parameter expression="[COMPLICATION.TITLE]"/>
-                                    </Template>
+                                    <Template>%s<Parameter expression="[COMPLICATION.TITLE]"/></Template>
                                 </Font>
                             </Text>
                         </PartText>
@@ -802,10 +694,7 @@
                         <PartText x="17" y="48" width="65" height="30" pivotX="0.5" pivotY="0.5" name="Text_2d1e" alpha="255">
                             <Text align="CENTER" ellipsis="TRUE">
                                 <Font family="SYNC_TO_DEVICE" size="16" weight="NORMAL" slant="NORMAL" color="#ffffffff">
-                                    <Template>
-                                        %s
-                                        <Parameter expression="[COMPLICATION.TEXT]"/>
-                                    </Template>
+                                    <Template>%s<Parameter expression="[COMPLICATION.TEXT]"/></Template>
                                 </Font>
                             </Text>
                         </PartText>
@@ -823,20 +712,14 @@
                         <PartText x="17" y="24" width="65" height="30" pivotX="0.5" pivotY="0.5" name="Text_8305" tintColor="[CONFIGURATION.themeColor.0]" alpha="255">
                             <Text align="CENTER" ellipsis="TRUE">
                                 <Font family="SYNC_TO_DEVICE" size="16" weight="NORMAL" slant="NORMAL" color="#ffffffff">
-                                    <Template>
-                                        %s
-                                        <Parameter expression="[COMPLICATION.TEXT]"/>
-                                    </Template>
+                                    <Template>%s<Parameter expression="[COMPLICATION.TEXT]"/></Template>
                                 </Font>
                             </Text>
                         </PartText>
                         <PartText x="21" y="57" width="59" height="20" pivotX="0.5" pivotY="0.5" name="Title_4e9e" tintColor="[CONFIGURATION.themeColor.0]" alpha="255">
                             <Text align="CENTER" ellipsis="TRUE">
                                 <Font family="SYNC_TO_DEVICE" size="12" weight="NORMAL" slant="NORMAL" color="#ffadadad">
-                                    <Template>
-                                        %s
-                                        <Parameter expression="[COMPLICATION.TITLE]"/>
-                                    </Template>
+                                    <Template>%s<Parameter expression="[COMPLICATION.TITLE]"/></Template>
                                 </Font>
                             </Text>
                         </PartText>
@@ -857,10 +740,7 @@
                         <PartText x="17" y="48" width="65" height="30" pivotX="0.5" pivotY="0.5" name="Text_2d1e" alpha="255">
                             <Text align="CENTER" ellipsis="TRUE">
                                 <Font family="SYNC_TO_DEVICE" size="16" weight="NORMAL" slant="NORMAL" color="#ffffffff">
-                                    <Template>
-                                        %s
-                                        <Parameter expression="[COMPLICATION.TITLE]"/>
-                                    </Template>
+                                    <Template>%s<Parameter expression="[COMPLICATION.TITLE]"/></Template>
                                 </Font>
                             </Text>
                         </PartText>
@@ -881,20 +761,14 @@
                         <PartText x="20" y="42" width="61" height="24" pivotX="0.5" pivotY="0.5" name="Text_c3eb" alpha="255">
                             <Text align="CENTER" ellipsis="TRUE">
                                 <Font family="SYNC_TO_DEVICE" size="16" weight="NORMAL" slant="NORMAL" color="#ffffffff">
-                                    <Template>
-                                        %s
-                                        <Parameter expression="[COMPLICATION.TEXT]"/>
-                                    </Template>
+                                    <Template>%s<Parameter expression="[COMPLICATION.TEXT]"/></Template>
                                 </Font>
                             </Text>
                         </PartText>
                         <PartText x="21" y="67" width="59" height="15" pivotX="0.5" pivotY="0.5" name="Title_85bd" alpha="255">
                             <Text align="CENTER" ellipsis="TRUE">
                                 <Font family="SYNC_TO_DEVICE" size="12" weight="NORMAL" slant="NORMAL" color="#ffadadad">
-                                    <Template>
-                                        %s
-                                        <Parameter expression="[COMPLICATION.TITLE]"/>
-                                    </Template>
+                                    <Template>%s<Parameter expression="[COMPLICATION.TITLE]"/></Template>
                                 </Font>
                             </Text>
                         </PartText>
@@ -957,10 +831,7 @@
                 <Transform target="x" value="43.001579552245055 + ((225 + cos((((([MINUTE] * 60 + [SECOND]) / 3600.0) * 360 - 90)) * (3.14 / 180)) * 120))"/>
                 <Text align="CENTER" ellipsis="FALSE">
                     <Font family="SYNC_TO_DEVICE" size="31" weight="ULTRA_BOLD" slant="NORMAL" color="#ff000000">
-                        <Template>
-                            %s
-                            <Parameter expression="[MINUTE_Z]"/>
-                        </Template>
+                        <Template>%s<Parameter expression="[MINUTE_Z]"/></Template>
                     </Font>
                 </Text>
             </PartText>
@@ -972,10 +843,7 @@
                 <Transform target="x" value="-53.99768322264334 + ((225 + cos((((([MINUTE] * 60 + [SECOND]) / 3600.0) * 360 - 90)) * (3.14 / 180)) * 150))"/>
                 <Text align="CENTER" ellipsis="FALSE">
                     <Font family="SYNC_TO_DEVICE" size="31" weight="ULTRA_BOLD" slant="NORMAL" color="#ff000000">
-                        <Template>
-                            %s
-                            <Parameter expression="[MINUTE_Z]"/>
-                        </Template>
+                        <Template>%s<Parameter expression="[MINUTE_Z]"/></Template>
                     </Font>
                 </Text>
             </PartText>
@@ -987,10 +855,7 @@
                 <Transform target="x" value="-39.99684078461387 + ((225+cos(((((([HOUR_1_12] - 1) * 60 + [MINUTE]) / 720) * 360 + 30)-84.2)*((3.14)/180))*150))"/>
                 <Text align="CENTER" ellipsis="FALSE">
                     <Font family="SYNC_TO_DEVICE" size="31" weight="ULTRA_BOLD" slant="NORMAL" color="#ff000000">
-                        <Template>
-                            %s
-                            <Parameter expression="[HOUR_1_12]"/>
-                        </Template>
+                        <Template>%s<Parameter expression="[HOUR_1_12]"/></Template>
                     </Font>
                 </Text>
             </PartText>
@@ -1002,10 +867,7 @@
                 <Transform target="x" value="0.001579552245051575 + ((225+cos(((((([HOUR_1_12] - 1) * 60 + [MINUTE]) / 720) * 360 + 30)-84.2)*((3.14)/180))*150))"/>
                 <Text align="CENTER" ellipsis="FALSE">
                     <Font family="SYNC_TO_DEVICE" size="31" weight="ULTRA_BOLD" slant="NORMAL" color="#ff000000">
-                        <Template>
-                            %s
-                            <Parameter expression="[HOUR_1_12]"/>
-                        </Template>
+                        <Template>%s<Parameter expression="[HOUR_1_12]"/></Template>
                     </Font>
                 </Text>
             </PartText>
@@ -1020,10 +882,7 @@
                 <Transform target="x" value="43.001579552245055 + ((225 + cos((((([MINUTE] * 60 + [SECOND]) / 3600.0) * 360 - 90)) * (3.14 / 180)) * 120))"/>
                 <Text align="CENTER" ellipsis="FALSE">
                     <Font family="SYNC_TO_DEVICE" size="25" weight="ULTRA_BOLD" slant="NORMAL" color="#ffffffff">
-                        <Template>
-                            %s
-                            <Parameter expression="[MINUTE_Z]"/>
-                        </Template>
+                        <Template>%s<Parameter expression="[MINUTE_Z]"/></Template>
                     </Font>
                 </Text>
             </PartText>
@@ -1035,10 +894,7 @@
                 <Transform target="x" value="-53.99768322264334 + ((225 + cos((((([MINUTE] * 60 + [SECOND]) / 3600.0) * 360 - 90)) * (3.14 / 180)) * 150))"/>
                 <Text align="CENTER" ellipsis="FALSE">
                     <Font family="SYNC_TO_DEVICE" size="25" weight="ULTRA_BOLD" slant="NORMAL" color="#ffffffff">
-                        <Template>
-                            %s
-                            <Parameter expression="[MINUTE_Z]"/>
-                        </Template>
+                        <Template>%s<Parameter expression="[MINUTE_Z]"/></Template>
                     </Font>
                 </Text>
             </PartText>
@@ -1050,10 +906,7 @@
                 <Transform target="x" value="-39.99684078461387 + ((225+cos(((((([HOUR_1_12] - 1) * 60 + [MINUTE]) / 720) * 360 + 30)-84.2)*((3.14)/180))*150))"/>
                 <Text align="CENTER" ellipsis="FALSE">
                     <Font family="SYNC_TO_DEVICE" size="25" weight="ULTRA_BOLD" slant="NORMAL" color="#ffffffff">
-                        <Template>
-                            %s
-                            <Parameter expression="[HOUR_1_12]"/>
-                        </Template>
+                        <Template>%s<Parameter expression="[HOUR_1_12]"/></Template>
                     </Font>
                 </Text>
             </PartText>
@@ -1065,10 +918,7 @@
                 <Transform target="x" value="0.001579552245051575 + ((225+cos(((((([HOUR_1_12] - 1) * 60 + [MINUTE]) / 720) * 360 + 30)-84.2)*((3.14)/180))*150))"/>
                 <Text align="CENTER" ellipsis="FALSE">
                     <Font family="SYNC_TO_DEVICE" size="25" weight="ULTRA_BOLD" slant="NORMAL" color="#ffffffff">
-                        <Template>
-                            %s
-                            <Parameter expression="[HOUR_1_12]"/>
-                        </Template>
+                        <Template>%s<Parameter expression="[HOUR_1_12]"/></Template>
                     </Font>
                 </Text>
             </PartText>
