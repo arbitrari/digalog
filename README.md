@@ -1,5 +1,7 @@
 # Digalog
 
+<p align="center"><a href="https://play.google.com/store/apps/details?id=com.arbitrary.digalog"><img src="docs/google-play-badge.png" alt="Get it on Google Play" height="80"></a></p>
+
 ## About
 A simple Wear OS watch face that appears analog on the surface, but integrates a digital time on the hour and minute hands for quick reference.
 
