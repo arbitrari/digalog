@@ -29,9 +29,9 @@ There are 4 different options for the tick marks on the watch face.
 
 <sub>Generated from the repo assets by `python3 tools/render_tick_marks.py`.</sub>
 
-## Complication Outlines
-Complications sit on a soft accent-tinted disc, styled after the Pixel Watch faces. The outline is a faint accent ring that progress values (battery, steps) fill in. Choose Show Outlines (default) or Hide Outlines in the editor. Outlines are hidden in always-on mode.
-
+## Other Options
+- Showing or hiding the Seconds hand
+- Showing or hiding accent rings around Complications
 
 ## Development
 
