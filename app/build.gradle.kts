@@ -11,9 +11,9 @@ android {
         // WFF v1 requires Wear OS 4 (API 33). The original WFS build declared minSdk 30
         // but relied on a bundled runtime; a pure WFF package needs 33+.
         minSdk = 33
-        targetSdk = 34
+        targetSdk = 35
         // Published build was 10010002 / 1.0.2. Must stay higher to ship as an update.
-        versionCode = 20000000
+        versionCode = 20000001
         versionName = "2.0.0"
     }
 
