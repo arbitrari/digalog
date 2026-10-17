@@ -17,9 +17,26 @@ android {
         versionName = "2.0.0"
     }
 
+    // Upload key for Play. Set these in ~/.gradle/gradle.properties (never in the repo):
+    // digalogUploadStoreFile, digalogUploadStorePassword, digalogUploadKeyAlias, digalogUploadKeyPassword
+    val uploadStoreFile = providers.gradleProperty("digalogUploadStoreFile").orNull
+    signingConfigs {
+        if (uploadStoreFile != null) {
+            create("upload") {
+                storeFile = file(uploadStoreFile)
+                storePassword = providers.gradleProperty("digalogUploadStorePassword").get()
+                keyAlias = providers.gradleProperty("digalogUploadKeyAlias").get()
+                keyPassword = providers.gradleProperty("digalogUploadKeyPassword").get()
+            }
+        }
+    }
+
     buildTypes {
         release {
             isMinifyEnabled = false
+            if (uploadStoreFile != null) {
+                signingConfig = signingConfigs.getByName("upload")
+            }
         }
     }
 }
