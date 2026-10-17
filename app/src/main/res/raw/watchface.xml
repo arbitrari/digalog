@@ -141,7 +141,7 @@
                 <Group x="0" y="0" width="450" height="450" pivotX="0.5" pivotY="0.5" name="No Complication Outlines" alpha="255"/>
             </ListOption>
         </ListConfiguration>
-        <ComplicationSlot slotId="0" displayName="complication_left" isCustomizable="TRUE" supportedTypes="SHORT_TEXT RANGED_VALUE SMALL_IMAGE MONOCHROMATIC_IMAGE" x="69" y="179" width="100" height="100" pivotX="0.5" pivotY="0.5" name="Left Complication_0" alpha="255">
+        <ComplicationSlot slotId="0" displayName="complication_left" isCustomizable="TRUE" supportedTypes="RANGED_VALUE SHORT_TEXT SMALL_IMAGE MONOCHROMATIC_IMAGE" x="69" y="179" width="100" height="100" pivotX="0.5" pivotY="0.5" name="Left Complication_0" alpha="255">
             <Variant mode="AMBIENT" target="alpha" value="0"/>
             <DefaultProviderPolicy defaultSystemProvider="WATCH_BATTERY" defaultSystemProviderType="SHORT_TEXT"/>
             <BoundingOval x="0" y="0" width="100" height="100"/>
@@ -253,7 +253,7 @@
             </Complication>
             <Complication type="EMPTY"/>
         </ComplicationSlot>
-        <ComplicationSlot slotId="1" displayName="complication_right" isCustomizable="TRUE" supportedTypes="SHORT_TEXT RANGED_VALUE SMALL_IMAGE MONOCHROMATIC_IMAGE" x="289" y="179" width="100" height="100" pivotX="0.5" pivotY="0.5" name="Right Complication_1" alpha="255">
+        <ComplicationSlot slotId="1" displayName="complication_right" isCustomizable="TRUE" supportedTypes="RANGED_VALUE SHORT_TEXT SMALL_IMAGE MONOCHROMATIC_IMAGE" x="289" y="179" width="100" height="100" pivotX="0.5" pivotY="0.5" name="Right Complication_1" alpha="255">
             <Variant mode="AMBIENT" target="alpha" value="0"/>
             <DefaultProviderPolicy defaultSystemProvider="DAY_AND_DATE" defaultSystemProviderType="SHORT_TEXT"/>
             <BoundingOval x="0" y="0" width="100" height="100"/>
@@ -365,7 +365,7 @@
             </Complication>
             <Complication type="EMPTY"/>
         </ComplicationSlot>
-        <ComplicationSlot slotId="2" displayName="complication_bottom" isCustomizable="TRUE" supportedTypes="SHORT_TEXT RANGED_VALUE SMALL_IMAGE MONOCHROMATIC_IMAGE" x="175" y="286" width="100" height="100" pivotX="0.5" pivotY="0.5" name="Bottom Complication_2" alpha="255">
+        <ComplicationSlot slotId="2" displayName="complication_bottom" isCustomizable="TRUE" supportedTypes="RANGED_VALUE SHORT_TEXT SMALL_IMAGE MONOCHROMATIC_IMAGE" x="175" y="286" width="100" height="100" pivotX="0.5" pivotY="0.5" name="Bottom Complication_2" alpha="255">
             <Variant mode="AMBIENT" target="alpha" value="0"/>
             <DefaultProviderPolicy defaultSystemProvider="EMPTY" defaultSystemProviderType="SHORT_TEXT"/>
             <BoundingOval x="0" y="0" width="100" height="100"/>
