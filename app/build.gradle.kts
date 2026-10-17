@@ -33,7 +33,8 @@ android {
 
     buildTypes {
         release {
-            isMinifyEnabled = false
+            // R8 strips the generated R classes so the bundle has no dex (Play rejects dex in watch faces).
+            isMinifyEnabled = true
             if (uploadStoreFile != null) {
                 signingConfig = signingConfigs.getByName("upload")
             }
