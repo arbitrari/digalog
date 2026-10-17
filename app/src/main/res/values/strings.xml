@@ -9,6 +9,9 @@
     <string name="ticks_hour">Hour Only</string>
     <string name="ticks_minute">Minute Only</string>
     <string name="ticks_none">None</string>
+    <string name="complication_outlines">Complication Outlines</string>
+    <string name="complication_outlines_show">Show Outlines</string>
+    <string name="complication_outlines_hide">Hide Outlines</string>
     <string name="second_hand">Second Hand</string>
     <string name="second_hand_show">Show Seconds</string>
     <string name="second_hand_hide">Hide Seconds</string>

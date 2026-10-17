@@ -47,6 +47,10 @@
             <ListOption id="minute" displayName="ticks_minute"/>
             <ListOption id="none" displayName="ticks_none"/>
         </ListConfiguration>
+        <ListConfiguration id="complicationOutlines" displayName="complication_outlines" defaultValue="show">
+            <ListOption id="show" displayName="complication_outlines_show"/>
+            <ListOption id="hide" displayName="complication_outlines_hide"/>
+        </ListConfiguration>
         <ListConfiguration id="secondHand" displayName="second_hand" defaultValue="show">
             <ListOption id="show" displayName="second_hand_show"/>
             <ListOption id="hide" displayName="second_hand_hide"/>
@@ -86,6 +90,34 @@
             <ListOption id="none">
                 <Group x="0" y="0" width="450" height="450" pivotX="0.5" pivotY="0.5" name="Ticks none" alpha="255">
                 </Group>
+            </ListOption>
+        </ListConfiguration>
+        <!-- Complication Outlines (editor option): accent ring around each round slot. Hidden in AOD. -->
+        <ListConfiguration id="complicationOutlines">
+            <ListOption id="show">
+                <Group x="0" y="0" width="450" height="450" pivotX="0.5" pivotY="0.5" name="Complication Outlines" alpha="255">
+                    <PartDraw x="69" y="179" width="100" height="100" pivotX="0.5" pivotY="0.5" name="Outline Left" alpha="255">
+                        <Variant mode="AMBIENT" target="alpha" value="0"/>
+                        <Ellipse x="1.5" y="1.5" width="97" height="97">
+                            <Stroke color="[CONFIGURATION.themeColor.0]" thickness="3"/>
+                        </Ellipse>
+                    </PartDraw>
+                    <PartDraw x="289" y="179" width="100" height="100" pivotX="0.5" pivotY="0.5" name="Outline Right" alpha="255">
+                        <Variant mode="AMBIENT" target="alpha" value="0"/>
+                        <Ellipse x="1.5" y="1.5" width="97" height="97">
+                            <Stroke color="[CONFIGURATION.themeColor.0]" thickness="3"/>
+                        </Ellipse>
+                    </PartDraw>
+                    <PartDraw x="175" y="286" width="100" height="100" pivotX="0.5" pivotY="0.5" name="Outline Bottom" alpha="255">
+                        <Variant mode="AMBIENT" target="alpha" value="0"/>
+                        <Ellipse x="1.5" y="1.5" width="97" height="97">
+                            <Stroke color="[CONFIGURATION.themeColor.0]" thickness="3"/>
+                        </Ellipse>
+                    </PartDraw>
+                </Group>
+            </ListOption>
+            <ListOption id="hide">
+                <Group x="0" y="0" width="450" height="450" pivotX="0.5" pivotY="0.5" name="No Complication Outlines" alpha="255"/>
             </ListOption>
         </ListConfiguration>
         <ComplicationSlot slotId="0" displayName="complication_left" isCustomizable="TRUE" supportedTypes="SHORT_TEXT RANGED_VALUE SMALL_IMAGE MONOCHROMATIC_IMAGE " x="69" y="179" width="100" height="100" pivotX="0.5" pivotY="0.5" name="Left Complication_0" alpha="255">

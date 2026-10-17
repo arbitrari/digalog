@@ -21,6 +21,9 @@ There are 4 different options for the tick marks on the watch face.
 
 <sub>Generated from the repo assets by `python3 tools/render_tick_marks.py`.</sub>
 
+## Complication Outlines
+Each complication can be ringed with a thin outline in the accent color. Choose Show Outlines (default) or Hide Outlines in the editor. Outlines are hidden in always-on mode.
+
 
 ## Development
 
