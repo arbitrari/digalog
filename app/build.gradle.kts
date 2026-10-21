@@ -13,7 +13,7 @@ android {
         minSdk = 33
         targetSdk = 35
         // Published build was 10010002 / 1.0.2. Must stay higher to ship as an update.
-        versionCode = 20000001
+        versionCode = 20000002
         versionName = "2.0.0"
     }
 
