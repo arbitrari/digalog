@@ -12,9 +12,9 @@ android {
         // but relied on a bundled runtime; a pure WFF package needs 33+.
         minSdk = 33
         targetSdk = 35
-        // Published build was 10010002 / 1.0.2. Must stay higher to ship as an update.
-        versionCode = 20000002
-        versionName = "2.0.0"
+        // 2.1.0. Scheme is major×10_000_000 + minor×100_000 + patch×1_000 + upload counter.
+        versionCode = 20100001
+        versionName = "2.1.0"
     }
 
     // Upload key for Play. Set these in ~/.gradle/gradle.properties (never in the repo):
