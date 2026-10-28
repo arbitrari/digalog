@@ -549,7 +549,7 @@
                 <Transform target="angle" value="0 + (clamp([MINUTE_SECOND], 0, 60) - 0) * 6 * (1)"/>
                 <PartText x="205" y="22" width="40" height="30" angle="-90" pivotX="0.5" pivotY="0.5" name="Minute Digital Right" alpha="255">
                     <Transform target="alpha" value="([MINUTE] &lt;= 30) ? 255 : 0"/>
-                    <Transform target="y" value="([MINUTE] % 10) == 1 ? -4 : 0"/>
+                    <Transform target="y" mode="BY" value="([MINUTE] % 10) == 1 ? -4 : 0"/>
                     <Localization calendar="GREGORIAN"/>
                     <Text align="END" ellipsis="FALSE">
                         <Font family="SYNC_TO_DEVICE" size="31" weight="ULTRA_BOLD" slant="NORMAL" color="#ff000000">
@@ -572,7 +572,7 @@
                 <Transform target="angle" value="0 + (clamp([HOUR_0_23_MINUTE], 0, 24) - 0) * 30 * (1)"/>
                 <PartText x="205" y="80" width="40" height="30" angle="-90" pivotX="0.5" pivotY="0.5" name="Hour Digital Right" alpha="255">
                     <Transform target="alpha" value="([HOUR_1_12] &gt;= 6) * ([HOUR_1_12] &lt; 12) ? 0 : 255"/>
-                    <Transform target="y" value="([HOUR_1_12] == 1) ? -4 : 0"/>
+                    <Transform target="y" mode="BY" value="([HOUR_1_12] == 1) ? -4 : 0"/>
                     <Localization calendar="GREGORIAN"/>
                     <Text align="END" ellipsis="FALSE">
                         <Font family="SYNC_TO_DEVICE" size="31" weight="ULTRA_BOLD" slant="NORMAL" color="#ff000000">
@@ -582,7 +582,7 @@
                 </PartText>
                 <PartText x="205" y="80" width="40" height="30" angle="90" pivotX="0.5" pivotY="0.5" name="Hour Digital Left" alpha="255">
                     <Transform target="alpha" value="([HOUR_1_12] &gt;= 6) * ([HOUR_1_12] &lt; 12) ? 255 : 0"/>
-                    <Transform target="y" value="(([HOUR_1_12] == 10) || ([HOUR_1_12] == 11)) ? -1 : 0"/>
+                    <Transform target="y" mode="BY" value="(([HOUR_1_12] == 10) || ([HOUR_1_12] == 11)) ? -1 : 0"/>
                     <Localization calendar="GREGORIAN"/>
                     <Text align="START" ellipsis="FALSE">
                         <Font family="SYNC_TO_DEVICE" size="31" weight="ULTRA_BOLD" slant="NORMAL" color="#ff000000">
@@ -601,7 +601,7 @@
                     <Transform target="angle" value="0 + (clamp([MINUTE_SECOND], 0, 60) - 0) * 6 * (1)"/>
                     <PartText x="205" y="25" width="40" height="30" angle="-90" pivotX="0.5" pivotY="0.5" name="Minute Digital Right White" alpha="255">
                         <Transform target="alpha" value="([MINUTE] &lt;= 30) ? 255 : 0"/>
-                        <Transform target="y" value="([MINUTE] % 10) == 1 ? -2 : 0"/>
+                        <Transform target="y" mode="BY" value="([MINUTE] % 10) == 1 ? -2 : 0"/>
                         <Localization calendar="GREGORIAN"/>
                         <Text align="END" ellipsis="FALSE">
                             <Font family="SYNC_TO_DEVICE" size="25" weight="ULTRA_BOLD" slant="NORMAL" color="#ffffffff">
@@ -623,7 +623,7 @@
                     <Transform target="angle" value="0 + (clamp([HOUR_0_23_MINUTE], 0, 24) - 0) * 30 * (1)"/>
                     <PartText x="205" y="85" width="40" height="30" angle="-90" pivotX="0.5" pivotY="0.5" name="Hour Digital Right White" alpha="255">
                         <Transform target="alpha" value="([HOUR_1_12] &gt;= 6) * ([HOUR_1_12] &lt; 12) ? 0 : 255"/>
-                        <Transform target="y" value="([HOUR_1_12] == 1) ? -2 : 0"/>
+                        <Transform target="y" mode="BY" value="([HOUR_1_12] == 1) ? -2 : 0"/>
                         <Localization calendar="GREGORIAN"/>
                         <Text align="END" ellipsis="FALSE">
                             <Font family="SYNC_TO_DEVICE" size="25" weight="ULTRA_BOLD" slant="NORMAL" color="#ffffffff">
@@ -633,7 +633,7 @@
                     </PartText>
                     <PartText x="205" y="85" width="40" height="30" angle="90" pivotX="0.5" pivotY="0.5" name="Hour Digital Left White" alpha="255">
                         <Transform target="alpha" value="([HOUR_1_12] &gt;= 6) * ([HOUR_1_12] &lt; 12) ? 255 : 0"/>
-                        <Transform target="y" value="(([HOUR_1_12] == 10) || ([HOUR_1_12] == 11)) ? -1 : 0"/>
+                        <Transform target="y" mode="BY" value="(([HOUR_1_12] == 10) || ([HOUR_1_12] == 11)) ? -1 : 0"/>
                         <Localization calendar="GREGORIAN"/>
                         <Text align="START" ellipsis="FALSE">
                             <Font family="SYNC_TO_DEVICE" size="25" weight="ULTRA_BOLD" slant="NORMAL" color="#ffffffff">
@@ -652,7 +652,7 @@
                     <Transform target="angle" value="0 + (clamp([MINUTE_SECOND], 0, 60) - 0) * 6 * (1)"/>
                     <PartText x="205" y="25" width="40" height="30" angle="-90" pivotX="0.5" pivotY="0.5" name="Minute Digital Right Accent" alpha="255">
                         <Transform target="alpha" value="([MINUTE] &lt;= 30) ? 255 : 0"/>
-                        <Transform target="y" value="([MINUTE] % 10) == 1 ? -2 : 0"/>
+                        <Transform target="y" mode="BY" value="([MINUTE] % 10) == 1 ? -2 : 0"/>
                         <Localization calendar="GREGORIAN"/>
                         <Text align="END" ellipsis="FALSE">
                             <Font family="SYNC_TO_DEVICE" size="25" weight="ULTRA_BOLD" slant="NORMAL" color="[CONFIGURATION.themeColor.0]">
@@ -674,7 +674,7 @@
                     <Transform target="angle" value="0 + (clamp([HOUR_0_23_MINUTE], 0, 24) - 0) * 30 * (1)"/>
                     <PartText x="205" y="85" width="40" height="30" angle="-90" pivotX="0.5" pivotY="0.5" name="Hour Digital Right Accent" alpha="255">
                         <Transform target="alpha" value="([HOUR_1_12] &gt;= 6) * ([HOUR_1_12] &lt; 12) ? 0 : 255"/>
-                        <Transform target="y" value="([HOUR_1_12] == 1) ? -2 : 0"/>
+                        <Transform target="y" mode="BY" value="([HOUR_1_12] == 1) ? -2 : 0"/>
                         <Localization calendar="GREGORIAN"/>
                         <Text align="END" ellipsis="FALSE">
                             <Font family="SYNC_TO_DEVICE" size="25" weight="ULTRA_BOLD" slant="NORMAL" color="[CONFIGURATION.themeColor.0]">
@@ -684,7 +684,7 @@
                     </PartText>
                     <PartText x="205" y="85" width="40" height="30" angle="90" pivotX="0.5" pivotY="0.5" name="Hour Digital Left Accent" alpha="255">
                         <Transform target="alpha" value="([HOUR_1_12] &gt;= 6) * ([HOUR_1_12] &lt; 12) ? 255 : 0"/>
-                        <Transform target="y" value="(([HOUR_1_12] == 10) || ([HOUR_1_12] == 11)) ? -1 : 0"/>
+                        <Transform target="y" mode="BY" value="(([HOUR_1_12] == 10) || ([HOUR_1_12] == 11)) ? -1 : 0"/>
                         <Localization calendar="GREGORIAN"/>
                         <Text align="START" ellipsis="FALSE">
                             <Font family="SYNC_TO_DEVICE" size="25" weight="ULTRA_BOLD" slant="NORMAL" color="[CONFIGURATION.themeColor.0]">
