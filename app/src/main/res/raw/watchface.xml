@@ -544,10 +544,10 @@
             </PartImage>
         </Group>
         <Group x="0" y="0" width="450" height="450" pivotX="0.5" pivotY="0.5" name="Digital Digits (Black)" alpha="255">
-            <!-- On the axis (x=205). END on the right half, START on the left. The watch draws right-half glyphs about 4px further out than the left half, so only the right box is set in by 4. Left minute y=22 (outer edge 1px inside the minute tip, radius 209). Right minute y=26. A trailing 1 still shifts outward by 4. -->
+            <!-- On the axis (x=205). END on the right half, START on the left. Left minute y=22. On the watch the right-half minute glyphs sit 7px further out than the left, so the right box is y=33. A trailing 1 still shifts outward by 4. -->
             <Group x="0" y="0" width="450" height="450" pivotX="0.5" pivotY="0.5" name="Minute Digits" alpha="255">
                 <Transform target="angle" value="0 + (clamp([MINUTE_SECOND], 0, 60) - 0) * 6 * (1)"/>
-                <PartText x="205" y="26" width="40" height="30" angle="-90" pivotX="0.5" pivotY="0.5" name="Minute Digital Right" alpha="255">
+                <PartText x="205" y="33" width="40" height="30" angle="-90" pivotX="0.5" pivotY="0.5" name="Minute Digital Right" alpha="255">
                     <Transform target="alpha" value="([MINUTE] &lt;= 30) ? 255 : 0"/>
                     <Transform target="y" mode="BY" value="([MINUTE] % 10) == 1 ? -4 : 0"/>
                     <Localization calendar="GREGORIAN"/>
@@ -595,10 +595,10 @@
             <ListOption id="white">
             <Group x="0" y="0" width="450" height="450" pivotX="0.5" pivotY="0.5" name="Digital Digits (White)" alpha="0">
                 <Variant mode="AMBIENT" target="alpha" value="255"/>
-                <!-- Always-on adds 3px to the interactive placement. Left minute y=25, right minute y=29 (the same 4px right-half inset). Left hour y=84, right hour y=88. A trailing 1 shifts -2. -->
+                <!-- Always-on minutes: left y=25, right y=34. Hours stay left y=84, right y=88. A trailing 1 shifts -2. -->
                 <Group x="0" y="0" width="450" height="450" pivotX="0.5" pivotY="0.5" name="Minute Digits White" alpha="255">
                     <Transform target="angle" value="0 + (clamp([MINUTE_SECOND], 0, 60) - 0) * 6 * (1)"/>
-                    <PartText x="205" y="29" width="40" height="30" angle="-90" pivotX="0.5" pivotY="0.5" name="Minute Digital Right White" alpha="255">
+                    <PartText x="205" y="34" width="40" height="30" angle="-90" pivotX="0.5" pivotY="0.5" name="Minute Digital Right White" alpha="255">
                         <Transform target="alpha" value="([MINUTE] &lt;= 30) ? 255 : 0"/>
                         <Transform target="y" mode="BY" value="([MINUTE] % 10) == 1 ? -2 : 0"/>
                         <Localization calendar="GREGORIAN"/>
@@ -645,10 +645,10 @@
             <ListOption id="accent">
             <Group x="0" y="0" width="450" height="450" pivotX="0.5" pivotY="0.5" name="Digital Digits (Accent)" alpha="0">
                 <Variant mode="AMBIENT" target="alpha" value="255"/>
-                <!-- Always-on adds 3px to the interactive placement. Left minute y=25, right minute y=29 (the same 4px right-half inset). Left hour y=84, right hour y=88. A trailing 1 shifts -2. -->
+                <!-- Always-on minutes: left y=25, right y=34. Hours stay left y=84, right y=88. A trailing 1 shifts -2. -->
                 <Group x="0" y="0" width="450" height="450" pivotX="0.5" pivotY="0.5" name="Minute Digits Accent" alpha="255">
                     <Transform target="angle" value="0 + (clamp([MINUTE_SECOND], 0, 60) - 0) * 6 * (1)"/>
-                    <PartText x="205" y="29" width="40" height="30" angle="-90" pivotX="0.5" pivotY="0.5" name="Minute Digital Right Accent" alpha="255">
+                    <PartText x="205" y="34" width="40" height="30" angle="-90" pivotX="0.5" pivotY="0.5" name="Minute Digital Right Accent" alpha="255">
                         <Transform target="alpha" value="([MINUTE] &lt;= 30) ? 255 : 0"/>
                         <Transform target="y" mode="BY" value="([MINUTE] % 10) == 1 ? -2 : 0"/>
                         <Localization calendar="GREGORIAN"/>
