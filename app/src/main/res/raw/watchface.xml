@@ -544,48 +544,84 @@
             </PartImage>
         </Group>
         <Group x="0" y="0" width="450" height="450" pivotX="0.5" pivotY="0.5" name="Digital Digits (Black)" alpha="255">
-            <!-- On the axis (x=205). END on the right half, START on the left. Left minute y=22. On the watch the right-half minute glyphs sit 7px further out than the left, so the right box is y=33. A trailing 1 still shifts outward by 4. -->
+            <!-- One box per digit, pitch 18, so the run width cannot move the outer edge. Right half is END with the pivot on the axis and the outer edge 20px toward the tip (y=33). Left half is START (y=22). A right-hand units 1 still shifts outward by 4. -->
             <Group x="0" y="0" width="450" height="450" pivotX="0.5" pivotY="0.5" name="Minute Digits" alpha="255">
                 <Transform target="angle" value="0 + (clamp([MINUTE_SECOND], 0, 60) - 0) * 6 * (1)"/>
-                <PartText x="205" y="33" width="40" height="30" angle="-90" pivotX="0.5" pivotY="0.5" name="Minute Digital Right" alpha="255">
+                <PartText x="225" y="33" width="20" height="30" angle="-90" pivotX="0" pivotY="0.5" name="Minute Units Right" alpha="255">
                     <Transform target="alpha" value="([MINUTE] &lt;= 30) ? 255 : 0"/>
                     <Transform target="y" mode="BY" value="([MINUTE] % 10) == 1 ? -4 : 0"/>
                     <Localization calendar="GREGORIAN"/>
                     <Text align="END" ellipsis="FALSE">
                         <Font family="SYNC_TO_DEVICE" size="31" weight="ULTRA_BOLD" slant="NORMAL" color="#ff000000">
-                            <Template>%s<Parameter expression="[MINUTE_Z]"/></Template>
+                            <Template>%s<Parameter expression="[MINUTE] % 10"/></Template>
                         </Font>
                     </Text>
                 </PartText>
-                <PartText x="205" y="22" width="40" height="30" angle="90" pivotX="0.5" pivotY="0.5" name="Minute Digital Left" alpha="255">
+                <PartText x="207" y="33" width="20" height="30" angle="-90" pivotX="0.90" pivotY="0.5" name="Minute Tens Right" alpha="255">
+                    <Transform target="alpha" value="([MINUTE] &lt;= 30) ? 255 : 0"/>
+                    <Localization calendar="GREGORIAN"/>
+                    <Text align="END" ellipsis="FALSE">
+                        <Font family="SYNC_TO_DEVICE" size="31" weight="ULTRA_BOLD" slant="NORMAL" color="#ff000000">
+                            <Template>%s<Parameter expression="floor([MINUTE] / 10)"/></Template>
+                        </Font>
+                    </Text>
+                </PartText>
+                <PartText x="205" y="22" width="20" height="30" angle="90" pivotX="1" pivotY="0.5" name="Minute Tens Left" alpha="255">
                     <Transform target="alpha" value="([MINUTE] &gt; 30) ? 255 : 0"/>
                     <Localization calendar="GREGORIAN"/>
                     <Text align="START" ellipsis="FALSE">
                         <Font family="SYNC_TO_DEVICE" size="31" weight="ULTRA_BOLD" slant="NORMAL" color="#ff000000">
-                            <Template>%s<Parameter expression="[MINUTE_Z]"/></Template>
+                            <Template>%s<Parameter expression="floor([MINUTE] / 10)"/></Template>
+                        </Font>
+                    </Text>
+                </PartText>
+                <PartText x="223" y="22" width="20" height="30" angle="90" pivotX="0.10" pivotY="0.5" name="Minute Units Left" alpha="255">
+                    <Transform target="alpha" value="([MINUTE] &gt; 30) ? 255 : 0"/>
+                    <Localization calendar="GREGORIAN"/>
+                    <Text align="START" ellipsis="FALSE">
+                        <Font family="SYNC_TO_DEVICE" size="31" weight="ULTRA_BOLD" slant="NORMAL" color="#ff000000">
+                            <Template>%s<Parameter expression="[MINUTE] % 10"/></Template>
                         </Font>
                     </Text>
                 </PartText>
             </Group>
-            <!-- Same 4px right-half inset, measured from the hour tip (radius 150). Left hour y=81 (1px inside the tip). Right hour y=85. Lone hour 1 still shifts -4, same as a minute ending in 1. -->
+            <!-- Hours use the same per-digit boxes. Single hours 1–9 occupy the outer box. 10 and 11 put the tens digit outside; 12 puts the units digit outside. -->
             <Group x="0" y="0" width="450" height="450" pivotX="0.5" pivotY="0.5" name="Hour Digits" alpha="255">
                 <Transform target="angle" value="0 + (clamp([HOUR_0_23_MINUTE], 0, 24) - 0) * 30 * (1)"/>
-                <PartText x="205" y="85" width="40" height="30" angle="-90" pivotX="0.5" pivotY="0.5" name="Hour Digital Right" alpha="255">
+                <PartText x="225" y="85" width="20" height="30" angle="-90" pivotX="0" pivotY="0.5" name="Hour Units Right" alpha="255">
                     <Transform target="alpha" value="([HOUR_1_12] &gt;= 6) * ([HOUR_1_12] &lt; 12) ? 0 : 255"/>
                     <Transform target="y" mode="BY" value="([HOUR_1_12] == 1) ? -4 : 0"/>
                     <Localization calendar="GREGORIAN"/>
                     <Text align="END" ellipsis="FALSE">
                         <Font family="SYNC_TO_DEVICE" size="31" weight="ULTRA_BOLD" slant="NORMAL" color="#ff000000">
-                            <Template>%s<Parameter expression="[HOUR_1_12]"/></Template>
+                            <Template>%s<Parameter expression="[HOUR_1_12] % 10"/></Template>
                         </Font>
                     </Text>
                 </PartText>
-                <PartText x="205" y="81" width="40" height="30" angle="90" pivotX="0.5" pivotY="0.5" name="Hour Digital Left" alpha="255">
+                <PartText x="207" y="85" width="20" height="30" angle="-90" pivotX="0.90" pivotY="0.5" name="Hour Tens Right" alpha="255">
+                    <Transform target="alpha" value="([HOUR_1_12] == 12) ? 255 : 0"/>
+                    <Localization calendar="GREGORIAN"/>
+                    <Text align="END" ellipsis="FALSE">
+                        <Font family="SYNC_TO_DEVICE" size="31" weight="ULTRA_BOLD" slant="NORMAL" color="#ff000000">
+                            <Template>%s<Parameter expression="floor([HOUR_1_12] / 10)"/></Template>
+                        </Font>
+                    </Text>
+                </PartText>
+                <PartText x="205" y="81" width="20" height="30" angle="90" pivotX="1" pivotY="0.5" name="Hour Outer Left" alpha="255">
                     <Transform target="alpha" value="([HOUR_1_12] &gt;= 6) * ([HOUR_1_12] &lt; 12) ? 255 : 0"/>
                     <Localization calendar="GREGORIAN"/>
                     <Text align="START" ellipsis="FALSE">
                         <Font family="SYNC_TO_DEVICE" size="31" weight="ULTRA_BOLD" slant="NORMAL" color="#ff000000">
-                            <Template>%s<Parameter expression="[HOUR_1_12]"/></Template>
+                            <Template>%s<Parameter expression="([HOUR_1_12] &gt;= 10) ? floor([HOUR_1_12] / 10) : [HOUR_1_12]"/></Template>
+                        </Font>
+                    </Text>
+                </PartText>
+                <PartText x="223" y="81" width="20" height="30" angle="90" pivotX="0.10" pivotY="0.5" name="Hour Units Left" alpha="255">
+                    <Transform target="alpha" value="([HOUR_1_12] &gt;= 10) * ([HOUR_1_12] &lt; 12) ? 255 : 0"/>
+                    <Localization calendar="GREGORIAN"/>
+                    <Text align="START" ellipsis="FALSE">
+                        <Font family="SYNC_TO_DEVICE" size="31" weight="ULTRA_BOLD" slant="NORMAL" color="#ff000000">
+                            <Template>%s<Parameter expression="[HOUR_1_12] % 10"/></Template>
                         </Font>
                     </Text>
                 </PartText>
@@ -595,47 +631,83 @@
             <ListOption id="white">
             <Group x="0" y="0" width="450" height="450" pivotX="0.5" pivotY="0.5" name="Digital Digits (White)" alpha="0">
                 <Variant mode="AMBIENT" target="alpha" value="255"/>
-                <!-- Always-on minutes: left y=25, right y=34. Hours stay left y=84, right y=88. A trailing 1 shifts -2. -->
+                <!-- Always-on digits, pitch 15 for size 25. Right minute outer edge y=34, left y=25. Hours stay right y=88, left y=84. A right-hand units 1 shifts -2. -->
                 <Group x="0" y="0" width="450" height="450" pivotX="0.5" pivotY="0.5" name="Minute Digits White" alpha="255">
                     <Transform target="angle" value="0 + (clamp([MINUTE_SECOND], 0, 60) - 0) * 6 * (1)"/>
-                    <PartText x="205" y="34" width="40" height="30" angle="-90" pivotX="0.5" pivotY="0.5" name="Minute Digital Right White" alpha="255">
+                    <PartText x="225" y="34" width="20" height="30" angle="-90" pivotX="0" pivotY="0.5" name="Minute Units Right White" alpha="255">
                         <Transform target="alpha" value="([MINUTE] &lt;= 30) ? 255 : 0"/>
                         <Transform target="y" mode="BY" value="([MINUTE] % 10) == 1 ? -2 : 0"/>
                         <Localization calendar="GREGORIAN"/>
                         <Text align="END" ellipsis="FALSE">
                             <Font family="SYNC_TO_DEVICE" size="25" weight="ULTRA_BOLD" slant="NORMAL" color="#ffffffff">
-                                <Template>%s<Parameter expression="[MINUTE_Z]"/></Template>
+                                <Template>%s<Parameter expression="[MINUTE] % 10"/></Template>
                             </Font>
                         </Text>
                     </PartText>
-                    <PartText x="205" y="25" width="40" height="30" angle="90" pivotX="0.5" pivotY="0.5" name="Minute Digital Left White" alpha="255">
+                    <PartText x="210" y="34" width="20" height="30" angle="-90" pivotX="0.75" pivotY="0.5" name="Minute Tens Right White" alpha="255">
+                        <Transform target="alpha" value="([MINUTE] &lt;= 30) ? 255 : 0"/>
+                        <Localization calendar="GREGORIAN"/>
+                        <Text align="END" ellipsis="FALSE">
+                            <Font family="SYNC_TO_DEVICE" size="25" weight="ULTRA_BOLD" slant="NORMAL" color="#ffffffff">
+                                <Template>%s<Parameter expression="floor([MINUTE] / 10)"/></Template>
+                            </Font>
+                        </Text>
+                    </PartText>
+                    <PartText x="205" y="25" width="20" height="30" angle="90" pivotX="1" pivotY="0.5" name="Minute Tens Left White" alpha="255">
                         <Transform target="alpha" value="([MINUTE] &gt; 30) ? 255 : 0"/>
                         <Localization calendar="GREGORIAN"/>
                         <Text align="START" ellipsis="FALSE">
                             <Font family="SYNC_TO_DEVICE" size="25" weight="ULTRA_BOLD" slant="NORMAL" color="#ffffffff">
-                                <Template>%s<Parameter expression="[MINUTE_Z]"/></Template>
+                                <Template>%s<Parameter expression="floor([MINUTE] / 10)"/></Template>
+                            </Font>
+                        </Text>
+                    </PartText>
+                    <PartText x="220" y="25" width="20" height="30" angle="90" pivotX="0.25" pivotY="0.5" name="Minute Units Left White" alpha="255">
+                        <Transform target="alpha" value="([MINUTE] &gt; 30) ? 255 : 0"/>
+                        <Localization calendar="GREGORIAN"/>
+                        <Text align="START" ellipsis="FALSE">
+                            <Font family="SYNC_TO_DEVICE" size="25" weight="ULTRA_BOLD" slant="NORMAL" color="#ffffffff">
+                                <Template>%s<Parameter expression="[MINUTE] % 10"/></Template>
                             </Font>
                         </Text>
                     </PartText>
                 </Group>
                 <Group x="0" y="0" width="450" height="450" pivotX="0.5" pivotY="0.5" name="Hour Digits White" alpha="255">
                     <Transform target="angle" value="0 + (clamp([HOUR_0_23_MINUTE], 0, 24) - 0) * 30 * (1)"/>
-                    <PartText x="205" y="88" width="40" height="30" angle="-90" pivotX="0.5" pivotY="0.5" name="Hour Digital Right White" alpha="255">
+                    <PartText x="225" y="88" width="20" height="30" angle="-90" pivotX="0" pivotY="0.5" name="Hour Units Right White" alpha="255">
                         <Transform target="alpha" value="([HOUR_1_12] &gt;= 6) * ([HOUR_1_12] &lt; 12) ? 0 : 255"/>
                         <Transform target="y" mode="BY" value="([HOUR_1_12] == 1) ? -2 : 0"/>
                         <Localization calendar="GREGORIAN"/>
                         <Text align="END" ellipsis="FALSE">
                             <Font family="SYNC_TO_DEVICE" size="25" weight="ULTRA_BOLD" slant="NORMAL" color="#ffffffff">
-                                <Template>%s<Parameter expression="[HOUR_1_12]"/></Template>
+                                <Template>%s<Parameter expression="[HOUR_1_12] % 10"/></Template>
                             </Font>
                         </Text>
                     </PartText>
-                    <PartText x="205" y="84" width="40" height="30" angle="90" pivotX="0.5" pivotY="0.5" name="Hour Digital Left White" alpha="255">
+                    <PartText x="210" y="88" width="20" height="30" angle="-90" pivotX="0.75" pivotY="0.5" name="Hour Tens Right White" alpha="255">
+                        <Transform target="alpha" value="([HOUR_1_12] == 12) ? 255 : 0"/>
+                        <Localization calendar="GREGORIAN"/>
+                        <Text align="END" ellipsis="FALSE">
+                            <Font family="SYNC_TO_DEVICE" size="25" weight="ULTRA_BOLD" slant="NORMAL" color="#ffffffff">
+                                <Template>%s<Parameter expression="floor([HOUR_1_12] / 10)"/></Template>
+                            </Font>
+                        </Text>
+                    </PartText>
+                    <PartText x="205" y="84" width="20" height="30" angle="90" pivotX="1" pivotY="0.5" name="Hour Outer Left White" alpha="255">
                         <Transform target="alpha" value="([HOUR_1_12] &gt;= 6) * ([HOUR_1_12] &lt; 12) ? 255 : 0"/>
                         <Localization calendar="GREGORIAN"/>
                         <Text align="START" ellipsis="FALSE">
                             <Font family="SYNC_TO_DEVICE" size="25" weight="ULTRA_BOLD" slant="NORMAL" color="#ffffffff">
-                                <Template>%s<Parameter expression="[HOUR_1_12]"/></Template>
+                                <Template>%s<Parameter expression="([HOUR_1_12] &gt;= 10) ? floor([HOUR_1_12] / 10) : [HOUR_1_12]"/></Template>
+                            </Font>
+                        </Text>
+                    </PartText>
+                    <PartText x="220" y="84" width="20" height="30" angle="90" pivotX="0.25" pivotY="0.5" name="Hour Units Left White" alpha="255">
+                        <Transform target="alpha" value="([HOUR_1_12] &gt;= 10) * ([HOUR_1_12] &lt; 12) ? 255 : 0"/>
+                        <Localization calendar="GREGORIAN"/>
+                        <Text align="START" ellipsis="FALSE">
+                            <Font family="SYNC_TO_DEVICE" size="25" weight="ULTRA_BOLD" slant="NORMAL" color="#ffffffff">
+                                <Template>%s<Parameter expression="[HOUR_1_12] % 10"/></Template>
                             </Font>
                         </Text>
                     </PartText>
@@ -645,47 +717,83 @@
             <ListOption id="accent">
             <Group x="0" y="0" width="450" height="450" pivotX="0.5" pivotY="0.5" name="Digital Digits (Accent)" alpha="0">
                 <Variant mode="AMBIENT" target="alpha" value="255"/>
-                <!-- Always-on minutes: left y=25, right y=34. Hours stay left y=84, right y=88. A trailing 1 shifts -2. -->
+                <!-- Always-on digits, pitch 15 for size 25. Right minute outer edge y=34, left y=25. Hours stay right y=88, left y=84. A right-hand units 1 shifts -2. -->
                 <Group x="0" y="0" width="450" height="450" pivotX="0.5" pivotY="0.5" name="Minute Digits Accent" alpha="255">
                     <Transform target="angle" value="0 + (clamp([MINUTE_SECOND], 0, 60) - 0) * 6 * (1)"/>
-                    <PartText x="205" y="34" width="40" height="30" angle="-90" pivotX="0.5" pivotY="0.5" name="Minute Digital Right Accent" alpha="255">
+                    <PartText x="225" y="34" width="20" height="30" angle="-90" pivotX="0" pivotY="0.5" name="Minute Units Right Accent" alpha="255">
                         <Transform target="alpha" value="([MINUTE] &lt;= 30) ? 255 : 0"/>
                         <Transform target="y" mode="BY" value="([MINUTE] % 10) == 1 ? -2 : 0"/>
                         <Localization calendar="GREGORIAN"/>
                         <Text align="END" ellipsis="FALSE">
                             <Font family="SYNC_TO_DEVICE" size="25" weight="ULTRA_BOLD" slant="NORMAL" color="[CONFIGURATION.themeColor.0]">
-                                <Template>%s<Parameter expression="[MINUTE_Z]"/></Template>
+                                <Template>%s<Parameter expression="[MINUTE] % 10"/></Template>
                             </Font>
                         </Text>
                     </PartText>
-                    <PartText x="205" y="25" width="40" height="30" angle="90" pivotX="0.5" pivotY="0.5" name="Minute Digital Left Accent" alpha="255">
+                    <PartText x="210" y="34" width="20" height="30" angle="-90" pivotX="0.75" pivotY="0.5" name="Minute Tens Right Accent" alpha="255">
+                        <Transform target="alpha" value="([MINUTE] &lt;= 30) ? 255 : 0"/>
+                        <Localization calendar="GREGORIAN"/>
+                        <Text align="END" ellipsis="FALSE">
+                            <Font family="SYNC_TO_DEVICE" size="25" weight="ULTRA_BOLD" slant="NORMAL" color="[CONFIGURATION.themeColor.0]">
+                                <Template>%s<Parameter expression="floor([MINUTE] / 10)"/></Template>
+                            </Font>
+                        </Text>
+                    </PartText>
+                    <PartText x="205" y="25" width="20" height="30" angle="90" pivotX="1" pivotY="0.5" name="Minute Tens Left Accent" alpha="255">
                         <Transform target="alpha" value="([MINUTE] &gt; 30) ? 255 : 0"/>
                         <Localization calendar="GREGORIAN"/>
                         <Text align="START" ellipsis="FALSE">
                             <Font family="SYNC_TO_DEVICE" size="25" weight="ULTRA_BOLD" slant="NORMAL" color="[CONFIGURATION.themeColor.0]">
-                                <Template>%s<Parameter expression="[MINUTE_Z]"/></Template>
+                                <Template>%s<Parameter expression="floor([MINUTE] / 10)"/></Template>
+                            </Font>
+                        </Text>
+                    </PartText>
+                    <PartText x="220" y="25" width="20" height="30" angle="90" pivotX="0.25" pivotY="0.5" name="Minute Units Left Accent" alpha="255">
+                        <Transform target="alpha" value="([MINUTE] &gt; 30) ? 255 : 0"/>
+                        <Localization calendar="GREGORIAN"/>
+                        <Text align="START" ellipsis="FALSE">
+                            <Font family="SYNC_TO_DEVICE" size="25" weight="ULTRA_BOLD" slant="NORMAL" color="[CONFIGURATION.themeColor.0]">
+                                <Template>%s<Parameter expression="[MINUTE] % 10"/></Template>
                             </Font>
                         </Text>
                     </PartText>
                 </Group>
                 <Group x="0" y="0" width="450" height="450" pivotX="0.5" pivotY="0.5" name="Hour Digits Accent" alpha="255">
                     <Transform target="angle" value="0 + (clamp([HOUR_0_23_MINUTE], 0, 24) - 0) * 30 * (1)"/>
-                    <PartText x="205" y="88" width="40" height="30" angle="-90" pivotX="0.5" pivotY="0.5" name="Hour Digital Right Accent" alpha="255">
+                    <PartText x="225" y="88" width="20" height="30" angle="-90" pivotX="0" pivotY="0.5" name="Hour Units Right Accent" alpha="255">
                         <Transform target="alpha" value="([HOUR_1_12] &gt;= 6) * ([HOUR_1_12] &lt; 12) ? 0 : 255"/>
                         <Transform target="y" mode="BY" value="([HOUR_1_12] == 1) ? -2 : 0"/>
                         <Localization calendar="GREGORIAN"/>
                         <Text align="END" ellipsis="FALSE">
                             <Font family="SYNC_TO_DEVICE" size="25" weight="ULTRA_BOLD" slant="NORMAL" color="[CONFIGURATION.themeColor.0]">
-                                <Template>%s<Parameter expression="[HOUR_1_12]"/></Template>
+                                <Template>%s<Parameter expression="[HOUR_1_12] % 10"/></Template>
                             </Font>
                         </Text>
                     </PartText>
-                    <PartText x="205" y="84" width="40" height="30" angle="90" pivotX="0.5" pivotY="0.5" name="Hour Digital Left Accent" alpha="255">
+                    <PartText x="210" y="88" width="20" height="30" angle="-90" pivotX="0.75" pivotY="0.5" name="Hour Tens Right Accent" alpha="255">
+                        <Transform target="alpha" value="([HOUR_1_12] == 12) ? 255 : 0"/>
+                        <Localization calendar="GREGORIAN"/>
+                        <Text align="END" ellipsis="FALSE">
+                            <Font family="SYNC_TO_DEVICE" size="25" weight="ULTRA_BOLD" slant="NORMAL" color="[CONFIGURATION.themeColor.0]">
+                                <Template>%s<Parameter expression="floor([HOUR_1_12] / 10)"/></Template>
+                            </Font>
+                        </Text>
+                    </PartText>
+                    <PartText x="205" y="84" width="20" height="30" angle="90" pivotX="1" pivotY="0.5" name="Hour Outer Left Accent" alpha="255">
                         <Transform target="alpha" value="([HOUR_1_12] &gt;= 6) * ([HOUR_1_12] &lt; 12) ? 255 : 0"/>
                         <Localization calendar="GREGORIAN"/>
                         <Text align="START" ellipsis="FALSE">
                             <Font family="SYNC_TO_DEVICE" size="25" weight="ULTRA_BOLD" slant="NORMAL" color="[CONFIGURATION.themeColor.0]">
-                                <Template>%s<Parameter expression="[HOUR_1_12]"/></Template>
+                                <Template>%s<Parameter expression="([HOUR_1_12] &gt;= 10) ? floor([HOUR_1_12] / 10) : [HOUR_1_12]"/></Template>
+                            </Font>
+                        </Text>
+                    </PartText>
+                    <PartText x="220" y="84" width="20" height="30" angle="90" pivotX="0.25" pivotY="0.5" name="Hour Units Left Accent" alpha="255">
+                        <Transform target="alpha" value="([HOUR_1_12] &gt;= 10) * ([HOUR_1_12] &lt; 12) ? 255 : 0"/>
+                        <Localization calendar="GREGORIAN"/>
+                        <Text align="START" ellipsis="FALSE">
+                            <Font family="SYNC_TO_DEVICE" size="25" weight="ULTRA_BOLD" slant="NORMAL" color="[CONFIGURATION.themeColor.0]">
+                                <Template>%s<Parameter expression="[HOUR_1_12] % 10"/></Template>
                             </Font>
                         </Text>
                     </PartText>
