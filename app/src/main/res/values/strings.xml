@@ -12,6 +12,9 @@
     <string name="complication_outlines">Complication Outlines</string>
     <string name="complication_outlines_show">Show Outlines</string>
     <string name="complication_outlines_hide">Hide Outlines</string>
+    <string name="ambient_color">Always-On</string>
+    <string name="ambient_color_white">White Hands</string>
+    <string name="ambient_color_accent">Accent Hands</string>
     <string name="second_hand">Second Hand</string>
     <string name="second_hand_show">Show Seconds</string>
     <string name="second_hand_hide">Hide Seconds</string>

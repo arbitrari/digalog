@@ -32,6 +32,7 @@ There are 4 different options for the tick marks on the watch face.
 ## Other Options
 - Showing or hiding the Seconds hand
 - Showing or hiding accent rings around Complications
+- Always-On: white hands, or hands in the accent color, while the watch is dimmed
 
 ## Development
 
