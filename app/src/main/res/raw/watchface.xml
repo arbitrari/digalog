@@ -544,10 +544,10 @@
             </PartImage>
         </Group>
         <Group x="0" y="0" width="450" height="450" pivotX="0.5" pivotY="0.5" name="Digital Digits (Black)" alpha="255">
-            <!-- Minute digits rotate with the minute hand. END (right half) / START (left half) pins the outer edge of the text to the hand tip, so wide and narrow times share one end gap. The device font's 1 is inset, so that case shifts outward. -->
+            <!-- Digits ride the hand. END (right half) / START (left half) pins the outer edge. The runtime draws from the baseline, which around 9 o'clock throws a single hour digit off the tip; the two x positions put that ink back on the hand axis. A narrow 1 shifts outward. -->
             <Group x="0" y="0" width="450" height="450" pivotX="0.5" pivotY="0.5" name="Minute Digits" alpha="255">
                 <Transform target="angle" value="0 + (clamp([MINUTE_SECOND], 0, 60) - 0) * 6 * (1)"/>
-                <PartText x="205" y="22" width="40" height="30" angle="-90" pivotX="0.5" pivotY="0.5" name="Minute Digital Right" alpha="255">
+                <PartText x="217" y="24" width="40" height="30" angle="-90" pivotX="0.5" pivotY="0.5" name="Minute Digital Right" alpha="255">
                     <Transform target="alpha" value="([MINUTE] &lt;= 30) ? 255 : 0"/>
                     <Transform target="y" mode="BY" value="([MINUTE] % 10) == 1 ? -4 : 0"/>
                     <Localization calendar="GREGORIAN"/>
@@ -557,7 +557,7 @@
                         </Font>
                     </Text>
                 </PartText>
-                <PartText x="205" y="22" width="40" height="30" angle="90" pivotX="0.5" pivotY="0.5" name="Minute Digital Left" alpha="255">
+                <PartText x="193" y="24" width="40" height="30" angle="90" pivotX="0.5" pivotY="0.5" name="Minute Digital Left" alpha="255">
                     <Transform target="alpha" value="([MINUTE] &gt; 30) ? 255 : 0"/>
                     <Localization calendar="GREGORIAN"/>
                     <Text align="START" ellipsis="FALSE">
@@ -570,7 +570,7 @@
             <!-- Hour digits rotate with the hour hand. Same outer-edge anchor as the minute digits. -->
             <Group x="0" y="0" width="450" height="450" pivotX="0.5" pivotY="0.5" name="Hour Digits" alpha="255">
                 <Transform target="angle" value="0 + (clamp([HOUR_0_23_MINUTE], 0, 24) - 0) * 30 * (1)"/>
-                <PartText x="205" y="80" width="40" height="30" angle="-90" pivotX="0.5" pivotY="0.5" name="Hour Digital Right" alpha="255">
+                <PartText x="217" y="84" width="40" height="30" angle="-90" pivotX="0.5" pivotY="0.5" name="Hour Digital Right" alpha="255">
                     <Transform target="alpha" value="([HOUR_1_12] &gt;= 6) * ([HOUR_1_12] &lt; 12) ? 0 : 255"/>
                     <Transform target="y" mode="BY" value="([HOUR_1_12] == 1) ? -4 : 0"/>
                     <Localization calendar="GREGORIAN"/>
@@ -580,7 +580,7 @@
                         </Font>
                     </Text>
                 </PartText>
-                <PartText x="205" y="80" width="40" height="30" angle="90" pivotX="0.5" pivotY="0.5" name="Hour Digital Left" alpha="255">
+                <PartText x="193" y="84" width="40" height="30" angle="90" pivotX="0.5" pivotY="0.5" name="Hour Digital Left" alpha="255">
                     <Transform target="alpha" value="([HOUR_1_12] &gt;= 6) * ([HOUR_1_12] &lt; 12) ? 255 : 0"/>
                     <Transform target="y" mode="BY" value="(([HOUR_1_12] == 10) || ([HOUR_1_12] == 11)) ? -1 : 0"/>
                     <Localization calendar="GREGORIAN"/>
@@ -599,7 +599,7 @@
                 <!-- Smaller AOD type. Outer edge is anchored like the interactive digits, inset so the end gap matches the larger side gaps. -->
                 <Group x="0" y="0" width="450" height="450" pivotX="0.5" pivotY="0.5" name="Minute Digits White" alpha="255">
                     <Transform target="angle" value="0 + (clamp([MINUTE_SECOND], 0, 60) - 0) * 6 * (1)"/>
-                    <PartText x="205" y="25" width="40" height="30" angle="-90" pivotX="0.5" pivotY="0.5" name="Minute Digital Right White" alpha="255">
+                    <PartText x="215" y="26" width="40" height="30" angle="-90" pivotX="0.5" pivotY="0.5" name="Minute Digital Right White" alpha="255">
                         <Transform target="alpha" value="([MINUTE] &lt;= 30) ? 255 : 0"/>
                         <Transform target="y" mode="BY" value="([MINUTE] % 10) == 1 ? -2 : 0"/>
                         <Localization calendar="GREGORIAN"/>
@@ -609,7 +609,7 @@
                             </Font>
                         </Text>
                     </PartText>
-                    <PartText x="205" y="25" width="40" height="30" angle="90" pivotX="0.5" pivotY="0.5" name="Minute Digital Left White" alpha="255">
+                    <PartText x="195" y="26" width="40" height="30" angle="90" pivotX="0.5" pivotY="0.5" name="Minute Digital Left White" alpha="255">
                         <Transform target="alpha" value="([MINUTE] &gt; 30) ? 255 : 0"/>
                         <Localization calendar="GREGORIAN"/>
                         <Text align="START" ellipsis="FALSE">
@@ -621,7 +621,7 @@
                 </Group>
                 <Group x="0" y="0" width="450" height="450" pivotX="0.5" pivotY="0.5" name="Hour Digits White" alpha="255">
                     <Transform target="angle" value="0 + (clamp([HOUR_0_23_MINUTE], 0, 24) - 0) * 30 * (1)"/>
-                    <PartText x="205" y="85" width="40" height="30" angle="-90" pivotX="0.5" pivotY="0.5" name="Hour Digital Right White" alpha="255">
+                    <PartText x="215" y="88" width="40" height="30" angle="-90" pivotX="0.5" pivotY="0.5" name="Hour Digital Right White" alpha="255">
                         <Transform target="alpha" value="([HOUR_1_12] &gt;= 6) * ([HOUR_1_12] &lt; 12) ? 0 : 255"/>
                         <Transform target="y" mode="BY" value="([HOUR_1_12] == 1) ? -2 : 0"/>
                         <Localization calendar="GREGORIAN"/>
@@ -631,7 +631,7 @@
                             </Font>
                         </Text>
                     </PartText>
-                    <PartText x="205" y="85" width="40" height="30" angle="90" pivotX="0.5" pivotY="0.5" name="Hour Digital Left White" alpha="255">
+                    <PartText x="195" y="88" width="40" height="30" angle="90" pivotX="0.5" pivotY="0.5" name="Hour Digital Left White" alpha="255">
                         <Transform target="alpha" value="([HOUR_1_12] &gt;= 6) * ([HOUR_1_12] &lt; 12) ? 255 : 0"/>
                         <Transform target="y" mode="BY" value="(([HOUR_1_12] == 10) || ([HOUR_1_12] == 11)) ? -1 : 0"/>
                         <Localization calendar="GREGORIAN"/>
@@ -650,7 +650,7 @@
                 <!-- Smaller AOD type. Outer edge is anchored like the interactive digits, inset so the end gap matches the larger side gaps. -->
                 <Group x="0" y="0" width="450" height="450" pivotX="0.5" pivotY="0.5" name="Minute Digits Accent" alpha="255">
                     <Transform target="angle" value="0 + (clamp([MINUTE_SECOND], 0, 60) - 0) * 6 * (1)"/>
-                    <PartText x="205" y="25" width="40" height="30" angle="-90" pivotX="0.5" pivotY="0.5" name="Minute Digital Right Accent" alpha="255">
+                    <PartText x="215" y="26" width="40" height="30" angle="-90" pivotX="0.5" pivotY="0.5" name="Minute Digital Right Accent" alpha="255">
                         <Transform target="alpha" value="([MINUTE] &lt;= 30) ? 255 : 0"/>
                         <Transform target="y" mode="BY" value="([MINUTE] % 10) == 1 ? -2 : 0"/>
                         <Localization calendar="GREGORIAN"/>
@@ -660,7 +660,7 @@
                             </Font>
                         </Text>
                     </PartText>
-                    <PartText x="205" y="25" width="40" height="30" angle="90" pivotX="0.5" pivotY="0.5" name="Minute Digital Left Accent" alpha="255">
+                    <PartText x="195" y="26" width="40" height="30" angle="90" pivotX="0.5" pivotY="0.5" name="Minute Digital Left Accent" alpha="255">
                         <Transform target="alpha" value="([MINUTE] &gt; 30) ? 255 : 0"/>
                         <Localization calendar="GREGORIAN"/>
                         <Text align="START" ellipsis="FALSE">
@@ -672,7 +672,7 @@
                 </Group>
                 <Group x="0" y="0" width="450" height="450" pivotX="0.5" pivotY="0.5" name="Hour Digits Accent" alpha="255">
                     <Transform target="angle" value="0 + (clamp([HOUR_0_23_MINUTE], 0, 24) - 0) * 30 * (1)"/>
-                    <PartText x="205" y="85" width="40" height="30" angle="-90" pivotX="0.5" pivotY="0.5" name="Hour Digital Right Accent" alpha="255">
+                    <PartText x="215" y="88" width="40" height="30" angle="-90" pivotX="0.5" pivotY="0.5" name="Hour Digital Right Accent" alpha="255">
                         <Transform target="alpha" value="([HOUR_1_12] &gt;= 6) * ([HOUR_1_12] &lt; 12) ? 0 : 255"/>
                         <Transform target="y" mode="BY" value="([HOUR_1_12] == 1) ? -2 : 0"/>
                         <Localization calendar="GREGORIAN"/>
@@ -682,7 +682,7 @@
                             </Font>
                         </Text>
                     </PartText>
-                    <PartText x="205" y="85" width="40" height="30" angle="90" pivotX="0.5" pivotY="0.5" name="Hour Digital Left Accent" alpha="255">
+                    <PartText x="195" y="88" width="40" height="30" angle="90" pivotX="0.5" pivotY="0.5" name="Hour Digital Left Accent" alpha="255">
                         <Transform target="alpha" value="([HOUR_1_12] &gt;= 6) * ([HOUR_1_12] &lt; 12) ? 255 : 0"/>
                         <Transform target="y" mode="BY" value="(([HOUR_1_12] == 10) || ([HOUR_1_12] == 11)) ? -1 : 0"/>
                         <Localization calendar="GREGORIAN"/>
